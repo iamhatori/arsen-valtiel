@@ -968,23 +968,20 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
 <!-- 03 // ПОРТФОЛИО В СТИЛЕ LIVEL-AGENCY.COM -->
 <section class="work_livel_sec" id="cases">
   <div class="work__pin" id="workPin">
-    <!-- Top row -->
-    <div class="work__head_row">
-      <div class="work__h_wrap">
-        <div class="work__sub_label">[03] les travaux</div>
-        <h2 class="work__h">работы<sup class="work__sup">{08}</sup></h2>
-      </div>
-      <p class="work__d">
-        избранное: youtube, vsl, реклама и моушен. скроллишь страницу — работы листаются.
-        <span class="work__d_sub">под каждым проектом — задача, результат и ссылка на просмотр.</span>
-      </p>
-    </div>
+    <!-- Huge Header top left -->
+    <h2 class="work__h">работы<sup class="work__sup">{08}</sup></h2>
 
-    <!-- Category (left of center) -->
-    <div class="wm wm-cat" id="wmCat"><span>YouTube Storytelling</span></div>
+    <!-- Top right description -->
+    <p class="work__d">
+      избранное: youtube, vsl, реклама и моушен.
+      <span class="sub">скроллишь страницу — работы листаются. клик по ролику — смотреть.</span>
+    </p>
 
     <!-- Left interactive project list -->
     <ul class="work__list" id="workList"></ul>
+
+    <!-- Category (left of center) -->
+    <div class="wm wm-cat" id="wmCat"><span>YouTube Storytelling</span></div>
 
     <!-- Center vertical card strip -->
     <div class="work__strip" id="workStrip"></div>
@@ -993,30 +990,15 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
     <svg class="br br-l" id="brL" viewBox="0 0 60 140" aria-hidden="true"><path d="M60 0C22 9 0 38 0 70s22 61 60 70v-19c-25-9-39-28-39-51s14-42 39-51z"/></svg>
     <svg class="br br-r" id="brR" viewBox="0 0 60 140" aria-hidden="true"><path d="M60 0C22 9 0 38 0 70s22 61 60 70v-19c-25-9-39-28-39-51s14-42 39-51z"/></svg>
 
-    <!-- Right project details -->
-    <div class="work__meta_box" id="workMetaBox">
-      <div class="work__meta_client" id="wmClient">што за тим</div>
-      <div class="work__meta_desc" id="wmDesc">моушен-фрагменты для ролика на канале. выстроил динамику так, чтобы удерживать зрителя от начала до конца видео.</div>
-      <div class="work__meta_res_badge">
-        <span class="work__meta_res_label">итог</span>
-        <span class="work__meta_res_val" id="wmResult">330 000 просмотров</span>
-      </div>
-      <a class="work__meta_btn" id="wmActionBtn" href="https://youtu.be/I3W5YqmL8E8" target="_blank" data-cursor="-exclusion -md">
-        смотреть ролик ↗
-      </a>
-    </div>
+    <!-- Project title & result (right of center) -->
+    <div class="wm wm-type" id="wmType"><span>што за тим — 330 000 просмотров</span></div>
 
     <!-- Active Number (far right) -->
-    <div class="wm wm-num" id="wmNum"><span>01 / 08</span></div>
+    <div class="wm wm-num" id="wmNum"><span>01</span></div>
 
-    <!-- Bottom row -->
-    <div class="work__bottom_row">
-      <div class="work__hint">скролл — листать кейсы · клик — открыть ролик</div>
-      <div class="work__prog_wrap">
-        <div class="work__prog_bar"><i id="workProgFill"></i></div>
-        <span class="work__prog_num" id="workProgNum">01 / 08</span>
-      </div>
-    </div>
+    <!-- Bottom hint & progress -->
+    <div class="work__hint">скролл — листать · клик — смотреть</div>
+    <div class="work__prog"><i id="workProgFill"></i></div>
   </div>
 </section>
 <!-- 04 // КОНЦЕПТЫ -->
@@ -1035,7 +1017,7 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
 <!-- Apple -->
 <a class="concept_card" data-cursor="-lg -text" data-cursor-text="В тг" href="https://t.me/declineda/58" style="text-decoration:none;display:block;border:1px solid rgba(255,255,255,0.1);border-radius:14px;overflow:hidden;background:#0f0f0f;transition:border-color 0.25s ease" target="_blank">
 <div style="aspect-ratio:16/9;background:#141414;position:relative;overflow:hidden">
-<video autoplay="" loop="" muted="" playsinline="" src="hero-bg.mp4" style="width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1)"></video>
+<img src="assets/concept-1.jpg" alt="Apple концепт промо" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.9) contrast(1.05);transition:transform 0.5s ease" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
 <div style="position:absolute;top:10px;left:10px;background:rgba(0,0,0,0.7);padding:4px 10px;border-radius:999px;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#fff">apple type</div>
 </div>
 <div style="padding:16px">
@@ -1049,7 +1031,7 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
 <!-- Drake -->
 <a class="concept_card" data-cursor="-lg -text" data-cursor-text="В тг" href="https://t.me/declineda/64" style="text-decoration:none;display:block;border:1px solid rgba(255,255,255,0.1);border-radius:14px;overflow:hidden;background:#0f0f0f;transition:border-color 0.25s ease" target="_blank">
 <div style="aspect-ratio:16/9;background:#141414;position:relative;overflow:hidden">
-<video autoplay="" loop="" muted="" playsinline="" src="hero-bg.mp4" style="width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1)"></video>
+<img src="assets/concept-2.jpg" alt="Drake концепт промо" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.9) contrast(1.05);transition:transform 0.5s ease" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
 <div style="position:absolute;top:10px;left:10px;background:rgba(0,0,0,0.7);padding:4px 10px;border-radius:999px;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#fff">commercial promo</div>
 </div>
 <div style="padding:16px">
@@ -1063,7 +1045,7 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
 <!-- Destroy Lonely -->
 <a class="concept_card" data-cursor="-lg -text" data-cursor-text="В тг" href="https://t.me/declineda/80" style="text-decoration:none;display:block;border:1px solid rgba(255,255,255,0.1);border-radius:14px;overflow:hidden;background:#0f0f0f;transition:border-color 0.25s ease" target="_blank">
 <div style="aspect-ratio:16/9;background:#141414;position:relative;overflow:hidden">
-<video autoplay="" loop="" muted="" playsinline="" src="hero-bg.mp4" style="width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1)"></video>
+<img src="assets/concept-3.jpg" alt="Destroy Lonely MONSTER" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.9) contrast(1.05);transition:transform 0.5s ease" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
 <div style="position:absolute;top:10px;left:10px;background:rgba(0,0,0,0.7);padding:4px 10px;border-radius:999px;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#fff">motion edit</div>
 </div>
 <div style="padding:16px">
@@ -1077,7 +1059,7 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
 <!-- hypestgg -->
 <a class="concept_card" data-cursor="-lg -text" data-cursor-text="В тг" href="https://x.com/hypestgg/status/2102435387486638473" style="text-decoration:none;display:block;border:1px solid rgba(255,255,255,0.1);border-radius:14px;overflow:hidden;background:#0f0f0f;transition:border-color 0.25s ease" target="_blank">
 <div style="aspect-ratio:16/9;background:#141414;position:relative;overflow:hidden">
-<video autoplay="" loop="" muted="" playsinline="" src="hero-bg.mp4" style="width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1)"></video>
+<img src="assets/concept-4.jpg" alt="x.com/hypestgg эдит" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.9) contrast(1.05);transition:transform 0.5s ease" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
 <div style="position:absolute;top:10px;left:10px;background:rgba(0,0,0,0.7);padding:4px 10px;border-radius:999px;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#fff">x.com edit</div>
 </div>
 <div style="padding:16px">
@@ -1847,8 +1829,8 @@ $('.model_card_top').on({
 /* ───────── LIVEL-AGENCY 1:1 WORKS SECTION ───────── */
 .work_livel_sec {
   position: relative;
-  height: calc(100vh + 8 * 55vh);
-  background: #050505;
+  height: calc(100vh + 8 * 40vh);
+  background: #000000;
   color: #ffffff;
   overflow: visible;
 }
@@ -1857,407 +1839,339 @@ $('.model_card_top').on({
   position: sticky;
   top: 0;
   height: 100vh;
+  height: 100svh;
   width: 100%;
   overflow: hidden;
-  box-sizing: border-box;
-  padding: 85px clamp(24px, 4vw, 60px) 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index: 20;
+  background: #000000;
 }
 
-/* Header */
-.work__head_row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding-bottom: 12px;
-  position: relative;
-  z-index: 10;
-  flex-shrink: 0;
-}
-
-.work__sub_label {
-  font-family: Inter, system-ui, sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.22em;
-  color: rgba(255, 255, 255, 0.4);
-  text-transform: uppercase;
-}
-
+/* Big Header top left */
 .work__h {
+  position: absolute;
+  left: clamp(24px, 4vw, 56px);
+  top: clamp(80px, 11vh, 105px);
   font-family: 'Instrument Serif', Georgia, serif;
-  font-size: clamp(36px, 5.2vw, 64px);
-  line-height: 0.92;
-  margin: 4px 0 0;
   font-weight: 400;
-  letter-spacing: -0.035em;
+  font-size: clamp(56px, 9.5vw, 150px);
+  letter-spacing: -0.06em;
+  line-height: 0.82;
+  margin: 0;
   color: #ffffff;
   text-transform: lowercase;
+  z-index: 3;
+  pointer-events: none;
 }
-
-.work__sup {
+.work__h sup {
   font-family: Inter, system-ui, sans-serif;
-  font-size: 0.35em;
-  letter-spacing: 0.05em;
-  color: rgba(255, 255, 255, 0.4);
-  vertical-align: super;
-  margin-left: 6px;
+  font-size: clamp(12px, 1.2vw, 16px);
+  letter-spacing: 0;
+  vertical-align: top;
+  margin-left: 0.4em;
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 400;
 }
 
+/* Top right description */
 .work__d {
-  max-width: 32ch;
-  font-size: 12px;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.55);
+  position: absolute;
+  right: clamp(24px, 4vw, 56px);
+  top: clamp(86px, 11.5vh, 112px);
+  width: min(320px, 26vw);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.75);
+  z-index: 3;
   margin: 0;
   text-transform: lowercase;
 }
-.work__d_sub {
+.work__d .sub {
   display: block;
-  color: rgba(255, 255, 255, 0.3);
-  margin-top: 4px;
-  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 6px;
+  font-size: 12px;
 }
 
-/* Left list */
+/* Left interactive project list */
 .work__list {
   position: absolute;
-  left: clamp(24px, 4vw, 60px);
+  left: clamp(24px, 4vw, 56px);
   top: 0;
-  width: clamp(160px, 15vw, 200px);
+  width: 20vw;
+  font-size: 13px;
+  line-height: 16px;
+  z-index: 3;
   list-style: none;
-  margin: 0;
   padding: 0;
-  z-index: 10;
+  margin: 0;
   will-change: transform;
-  pointer-events: auto;
 }
 .work__list li {
-  margin: 0;
-  padding: 3px 0;
-  transition: opacity 0.3s ease, color 0.3s ease;
-}
-.work__list li button {
-  background: transparent;
-  border: none;
-  outline: none;
-  color: rgba(255, 255, 255, 0.3);
-  font-family: Inter, system-ui, sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.02em;
-  text-align: left;
-  cursor: pointer;
-  padding: 6px 10px;
-  border-radius: 6px;
-  display: block;
-  width: 100%;
+  color: rgba(255, 255, 255, 0.28);
+  transition: color 0.35s ease;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: all 0.25s ease;
+  margin: 6px 0;
 }
-.work__list li button:hover {
-  color: rgba(255, 255, 255, 0.85);
-  background: rgba(255, 255, 255, 0.04);
+.work__list li button {
+  text-align: left;
+  width: 100%;
+  padding: 0;
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: inherit;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.25s ease;
 }
-.work__list li.on button {
+.work__list li.on {
   color: #ffffff;
   font-weight: 600;
-  background: rgba(255, 255, 255, 0.08);
+}
+.work__list li:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+.work__list li.on:hover {
+  color: #ffffff;
 }
 
-/* Category label left of center */
-.wm-cat {
+/* Middle meta tags: Category, Type/Title, and Number */
+.wm {
   position: absolute;
-  left: 25%;
   top: 50%;
   transform: translateY(-50%);
-  font-family: Inter, system-ui, sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
-  z-index: 10;
+  font-size: 13px;
+  height: 20px;
+  overflow: hidden;
+  z-index: 3;
+  white-space: nowrap;
   pointer-events: none;
-  max-width: 12ch;
-  line-height: 1.5;
+}
+.wm span {
+  display: block;
+  line-height: 20px;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s;
+}
+.wm.swap span {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: none;
+}
+.wm-cat {
+  right: calc(50% + var(--bx, 155px) + var(--bw, 36px) + 24px);
+  left: auto;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  font-family: Inter, system-ui, sans-serif;
+}
+.wm-type {
+  left: calc(50% + var(--bx, 155px) + var(--bw, 36px) + 24px);
+  right: auto;
+  text-align: left;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  font-family: Inter, system-ui, sans-serif;
+}
+.wm-num {
+  right: clamp(24px, 4vw, 56px);
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(36px, 4vw, 56px);
+  color: rgba(255, 255, 255, 0.85);
+  font-variant-numeric: tabular-nums;
+  height: auto !important;
+  line-height: 1 !important;
+  overflow: visible !important;
+}
+.wm-num span {
+  display: block;
+  line-height: 1;
 }
 
-/* Strip of cards */
+/* Center card strip */
 .work__strip {
   position: absolute;
   left: 50%;
   top: 0;
   bottom: 0;
-  width: var(--tw, 260px);
-  margin-left: calc(var(--tw, 260px) / -2);
-  z-index: 5;
+  width: var(--tw, 180px);
+  margin-left: calc(var(--tw, 180px) / -2);
+  z-index: 2;
   pointer-events: auto;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 12%, #000 26%, #000 74%, transparent 88%, transparent 100%);
-  mask-image: linear-gradient(to bottom, transparent 0%, transparent 12%, #000 26%, #000 74%, transparent 88%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 4%, #000 14%, #000 86%, transparent 96%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, transparent 4%, #000 14%, #000 86%, transparent 96%, transparent 100%);
 }
-
 .wt {
   position: absolute;
   left: 0;
   top: 0;
   display: block;
   width: 100%;
-  height: var(--ih, 350px);
-  border-radius: 16px;
-  overflow: hidden;
-  background: #111111;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  aspect-ratio: 3/4;
   transform-origin: center center;
   will-change: transform, filter, opacity;
   padding: 0;
+  background: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  overflow: hidden;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
   transition: border-color 0.3s ease;
 }
 .wt:hover {
-  border-color: rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.4);
 }
-.wt video {
+.wt img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  filter: brightness(0.9);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+}
+.wt:hover img {
+  transform: scale(1.04);
+  filter: brightness(1);
 }
 .wt .wt_overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.8) 100%);
   pointer-events: none;
 }
 .wt .wt_badge {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 10px;
+  left: 10px;
   background: rgba(0, 0, 0, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 999px;
-  padding: 5px 12px;
+  padding: 4px 10px;
   font-family: Inter, system-ui, sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.1em;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.9);
   z-index: 2;
 }
-.wt .wt_play {
+.wt .wt_title {
   position: absolute;
   bottom: 12px;
+  left: 12px;
   right: 12px;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  backdrop-filter: blur(4px);
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 20px;
+  line-height: 1.1;
+  color: #ffffff;
   z-index: 2;
+  text-transform: lowercase;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
 }
 
-/* Brackets */
+/* SVG Brackets */
 .br {
   position: absolute;
   top: 50%;
-  width: var(--bw, 32px);
-  height: var(--bh, 140px);
-  z-index: 10;
+  width: var(--bw, 40px);
+  height: var(--bh, 130px);
+  z-index: 3;
   color: #ffffff;
   pointer-events: none;
-  opacity: 0.9;
-  transition: transform 0.3s ease;
+  transition: color 0.9s;
 }
 .br path { fill: currentColor; }
 .br-l {
   left: 50%;
-  transform: translate(calc(-1 * var(--bx, 160px) - 100%), -50%);
+  transform: translate(calc(-1 * var(--bx, 155px) - 100%), -50%);
 }
 .br-r {
   left: 50%;
-  transform: translate(var(--bx, 160px), -50%) scaleX(-1);
+  transform: translate(var(--bx, 155px), -50%) scaleX(-1);
+}
+.br.kick {
+  animation: kick 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.br-r.kick {
+  animation: kickr 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }
 @keyframes kick {
-  40% { transform: translate(calc(-1 * var(--bx, 160px) - 100% + 14px), -50%) scaleY(0.93); }
+  40% { transform: translate(calc(-1 * var(--bx, 155px) - 100% + 14px), -50%) scaleY(0.93); }
 }
 @keyframes kickr {
-  40% { transform: translate(calc(var(--bx, 160px) - 14px), -50%) scaleX(-1) scaleY(0.93); }
-}
-.br.kick { animation: kick 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
-.br-r.kick { animation: kickr 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
-
-/* Right meta box */
-.work__meta_box {
-  position: absolute;
-  left: 67%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: clamp(200px, 19vw, 260px);
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.work__meta_client {
-  font-family: 'Instrument Serif', Georgia, serif;
-  font-size: clamp(24px, 2.5vw, 34px);
-  line-height: 1.05;
-  color: #ffffff;
-  text-transform: lowercase;
-}
-.work__meta_desc {
-  font-family: Inter, system-ui, sans-serif;
-  font-size: 13px;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.68);
-  text-transform: lowercase;
-}
-.work__meta_res_badge {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 10px 14px;
-}
-.work__meta_res_label {
-  display: block;
-  font-size: 9px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
-}
-.work__meta_res_val {
-  display: block;
-  font-size: 14px;
-  font-weight: 600;
-  color: #ffffff;
-  margin-top: 2px;
-}
-.work__meta_btn {
-  display: inline-block;
-  background: #ffffff;
-  color: #000000;
-  text-decoration: none;
-  font-family: Inter, system-ui, sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  padding: 12px 20px;
-  border-radius: 999px;
-  text-align: center;
-  transition: all 0.25s ease;
-  margin-top: 4px;
-}
-.work__meta_btn:hover {
-  background: rgba(255, 255, 255, 0.85);
-  transform: translateY(-1px);
+  40% { transform: translate(calc(var(--bx, 155px) - 14px), -50%) scaleX(-1) scaleY(0.93); }
 }
 
-/* Number on far right */
-.wm-num {
-  position: absolute;
-  right: clamp(24px, 4vw, 50px);
-  top: 50%;
-  transform: translateY(-50%);
-  font-family: 'Instrument Serif', Georgia, serif;
-  font-size: clamp(22px, 2.5vw, 36px);
-  color: rgba(255, 255, 255, 0.35);
-  font-variant-numeric: tabular-nums;
-  pointer-events: none;
-}
-
-/* Bottom row */
-.work__bottom_row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 12px;
-  position: relative;
-  z-index: 10;
-  flex-shrink: 0;
-}
+/* Hint & Progress */
 .work__hint {
+  position: absolute;
+  left: clamp(24px, 4vw, 56px);
+  bottom: clamp(20px, 3.5vh, 40px);
   font-family: Inter, system-ui, sans-serif;
   font-size: 11px;
   color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.04em;
   text-transform: lowercase;
+  z-index: 3;
 }
-.work__prog_wrap {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.work__prog_bar {
+.work__prog {
+  position: absolute;
+  right: clamp(24px, 4vw, 56px);
+  bottom: clamp(24px, 3.8vh, 44px);
   width: 120px;
   height: 2px;
   background: rgba(255, 255, 255, 0.12);
   border-radius: 2px;
   overflow: hidden;
-  position: relative;
+  z-index: 3;
 }
-.work__prog_bar i {
+.work__prog i {
   position: absolute;
   inset: 0;
   background: #ffffff;
-  transform-origin: left center;
+  transform-origin: left;
   transform: scaleX(0);
-}
-.work__prog_num {
-  font-family: 'Instrument Serif', Georgia, serif;
-  font-size: 15px;
-  color: #ffffff;
 }
 
 /* Mobile responsive */
 @media (max-width: 991px) {
   .work_livel_sec {
-    height: auto !important;
+    height: calc(100svh + 8 * 30svh);
   }
-  .work__pin {
-    position: relative !important;
-    height: auto !important;
-    padding: 40px 20px !important;
-  }
-  .work__list, .wm-cat, .wm-num, .br, .work__prog_wrap {
+  .work__list, .wm-cat {
     display: none !important;
   }
-  .work__strip {
-    position: relative !important;
-    left: auto !important;
-    top: auto !important;
-    bottom: auto !important;
-    width: 100% !important;
-    margin: 30px 0 !important;
-    mask-image: none !important;
-    -webkit-mask-image: none !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 20px !important;
+  .work__h {
+    font-size: clamp(44px, 14vw, 80px);
   }
-  .wt {
-    position: relative !important;
-    width: 100% !important;
-    height: 260px !important;
-    transform: none !important;
-    filter: none !important;
-    opacity: 1 !important;
+  .work__d {
+    display: none !important;
   }
-  .work__meta_box {
-    position: relative !important;
-    left: auto !important;
+  .wm-type {
+    display: block !important;
+    left: clamp(20px, 4vw, 40px) !important;
+    bottom: clamp(20px, 4vh, 36px) !important;
     top: auto !important;
     transform: none !important;
-    width: 100% !important;
+  }
+  .wm-num {
+    bottom: clamp(20px, 4vh, 36px) !important;
+    top: auto !important;
+    transform: none !important;
+    right: clamp(20px, 4vw, 40px) !important;
+  }
+  .work__hint, .work__prog {
+    display: none !important;
   }
 }
 
@@ -2308,82 +2222,74 @@ $('.model_card_top').on({
     {
       num: "01",
       name: "што за тим",
-      type: "YouTube Storytelling",
+      cat: "YouTube Storytelling",
+      type: "што за тим — 330 000 просмотров",
       tag: "YOUTUBE · 330K",
-      desc: "моушен-фрагменты для ролика на канале. выстроил динамику так, чтобы удерживать зрителя от начала до конца видео.",
-      result: "330 000 просмотров",
-      link: "https://youtu.be/I3W5YqmL8E8",
-      video: "hero-bg.mp4"
+      image: "assets/case-1.jpg",
+      link: "https://youtu.be/I3W5YqmL8E8"
     },
     {
       num: "02",
       name: "Семён Гельфенбуйм",
-      type: "VSL / Продающее видео",
+      cat: "VSL / Продающее видео",
+      type: "Семён Гельфенбуйм — запуск 1+ млн ₽",
       tag: "VSL · 1+ МЛН",
-      desc: "продающее видео для запуска. собрал драматургию так, чтобы досматривали до оффера и конвертировались в покупку.",
-      result: "запуск на 1+ млн рублей",
-      link: "https://t.me/declineda/67",
-      video: "hero-bg.mp4"
+      image: "assets/case-2.jpg",
+      link: "https://t.me/declineda/67"
     },
     {
       num: "03",
       name: "Javier Leyenda",
-      type: "Google Ads / Performance",
+      cat: "Google Ads / Performance",
+      type: "Javier Leyenda — реклама и лиды",
       tag: "ADS · ПЕРФОРМАНС",
-      desc: "динамичные рекламные ролики с хуком в первые секунды. высокая конверсия и стабильные заявки.",
-      result: "стабильные заявки с рекламы",
-      link: "https://t.me/declineda/59",
-      video: "hero-bg.mp4"
+      image: "assets/case-3.jpg",
+      link: "https://t.me/declineda/59"
     },
     {
       num: "04",
       name: "Armando",
-      type: "Google Ads / Performance",
+      cat: "Google Ads / Performance",
+      type: "Armando — 4 ролика под ключ",
       tag: "ADS · ЗАПУСК",
-      desc: "4 ролика под рекламную кампанию. пришел ко мне по рекомендации после успешных роликов Хавьера.",
-      result: "целевые лиды / запуск",
-      link: "https://t.me/declineda/59",
-      video: "hero-bg.mp4"
+      image: "assets/case-4.jpg",
+      link: "https://t.me/declineda/59"
     },
     {
       num: "05",
       name: "matveyforgeon",
-      type: "YouTube Storytelling",
+      cat: "YouTube Storytelling",
+      type: "matveyforgeon — удержание зрителя",
       tag: "YOUTUBE · AI",
-      desc: "горизонтальный ролик про AI: история, которую смотрят до конца, и стабильный поток заявок после нее.",
-      result: "большое количество лидов",
-      link: "https://youtu.be/FfmR6vr8Pzs",
-      video: "hero-bg.mp4"
+      image: "assets/case-5.jpg",
+      link: "https://youtu.be/FfmR6vr8Pzs"
     },
     {
       num: "06",
       name: "Rossi",
-      type: "App Promo / Motion",
+      cat: "App Promo / Motion",
+      type: "Rossi — промо в стиле Apple",
       tag: "APP PROMO · 2D",
-      desc: "показал приложение так, как это делает Apple: интерфейс в движении, 2D-графика и тактильная анимация.",
-      result: "высокое удержание",
-      link: "https://t.me/declineda/72",
-      video: "hero-bg.mp4"
+      image: "assets/case-6.jpg",
+      link: "https://t.me/declineda/72"
     },
     {
       num: "07",
       name: "Skills Better",
-      type: "Commercial Vertical",
+      cat: "Commercial Vertical",
+      type: "Skills Better — динамичный вертикал",
       tag: "REELS · РЕКЛАМА",
-      desc: "вертикальные ролики с 2D-графикой и плотным моушеном под запуск рекламных кампаний.",
-      result: "высокое удержание и охваты",
-      link: "https://t.me/declineda/69",
-      video: "hero-bg.mp4"
+      image: "assets/case-7.jpg",
+      link: "https://t.me/declineda/69"
     },
     {
       num: "08",
       name: "Joseph Editing",
-      type: "3D Reels / Devin Jatho",
+      cat: "3D Reels / Devin Jatho",
+      type: "Joseph Editing — 3D-моушен трекинг",
       tag: "3D REELS · 38.4K",
-      desc: "вертикальный ролик с 3D-моушеном в стиле Devin Jatho: объемный свет, физика и динамичный трекинг.",
-      result: "вирусные просмотры reels",
-      link: "https://www.instagram.com/josephswork/",
-      video: "hero-bg.mp4"
+      image: "assets/case-8.jpg",
+      link: "https://www.instagram.com/josephswork/"
     }
   ];
 
@@ -2401,8 +2307,8 @@ $('.model_card_top').on({
             overwrite: true,
             skewing: 1.5,
             stateDetection: {
-              '-exclusion': 'button, a, .g_button_main, .g_button_secondary, .g_button_wrap, .nav_link, .livel_arrow_btn, .logo_link_wrap, .work__meta_btn',
-              '-md': 'button, a, .g_button_main, .g_button_secondary, .g_button_wrap, .nav_link, .livel_arrow_btn, .logo_link_wrap, .work__meta_btn',
+              '-exclusion': 'button, a, .g_button_main, .g_button_secondary, .g_button_wrap, .nav_link, .livel_arrow_btn, .logo_link_wrap',
+              '-md': 'button, a, .g_button_main, .g_button_secondary, .g_button_wrap, .nav_link, .livel_arrow_btn, .logo_link_wrap',
               '-lg': '.wt, .concept_card',
               '-hidden': 'iframe, input, textarea'
             }
@@ -2424,39 +2330,33 @@ $('.model_card_top').on({
     const brL = document.getElementById('brL');
     const brR = document.getElementById('brR');
     const wmCat = document.getElementById('wmCat');
+    const wmType = document.getElementById('wmType');
     const wmNum = document.getElementById('wmNum');
-    const wmClient = document.getElementById('wmClient');
-    const wmDesc = document.getElementById('wmDesc');
-    const wmResult = document.getElementById('wmResult');
-    const wmBtn = document.getElementById('wmActionBtn');
     const progFill = document.getElementById('workProgFill');
-    const progNum = document.getElementById('workProgNum');
 
     const n = PROJECTS.length;
-    let tw = 250, ih = 340, gap = 24;
+    let tw = 190, ih = 255, gap = 20;
     let active = -1;
     let targetF = 0;
     let currentF = 0;
     let snapTimer = null;
 
-    // Render cards
+    // Render center cards with photo posters
     strip.innerHTML = PROJECTS.map((p, i) => `
       <div class="wt" data-i="${i}" data-link="${p.link}" data-cursor="-lg -text" data-cursor-text="Смотреть">
-        <video loop muted playsinline src="${p.video}"></video>
+        <img src="${p.image}" alt="${p.name}" loading="lazy">
         <div class="wt_overlay"></div>
-        <div class="wt_badge">${p.tag}</div>
-        <div class="wt_play">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        </div>
+        <div class="wt_badge">видео #${p.num}</div>
+        <div class="wt_title">${p.name}</div>
       </div>
     `).join('');
 
     const thumbs = strip.querySelectorAll('.wt');
 
-    // Render list
+    // Render left list
     list.innerHTML = PROJECTS.map((p, i) => `
       <li class="${i === 0 ? 'on' : ''}">
-        <button type="button" data-i="${i}" data-cursor="-exclusion -md">${p.num} · ${p.name}</button>
+        <button type="button" data-i="${i}" data-cursor="-exclusion -md">${p.name}</button>
       </li>
     `).join('');
 
@@ -2464,20 +2364,30 @@ $('.model_card_top').on({
 
     function layout() {
       const vw = window.innerWidth;
-      if (vw <= 991) return;
-      tw = Math.min(Math.max(vw * 0.17, 220), 280);
+      const isMob = vw <= 991;
+      tw = isMob ? Math.min(vw * 0.44, 180) : Math.min(Math.max(vw * 0.14, 180), 240);
       ih = Math.round(tw * 1.34);
-      gap = Math.round(ih * 0.14);
+      gap = Math.round(tw * 0.16);
 
-      const bh = Math.round(ih * 1.25 * 0.72);
-      const bw = Math.round(bh * 26 / 140);
-      const bx = Math.round(tw * 1.25 / 2 + 30);
+      const bh = Math.round(ih * 1.28 * 0.72);
+      const bw = Math.round(bh * 34 / 140);
+      const bx = Math.round(tw * 1.28 / 2 + (isMob ? 10 : 28));
 
       pin.style.setProperty('--tw', tw + 'px');
       pin.style.setProperty('--ih', ih + 'px');
       pin.style.setProperty('--bh', bh + 'px');
       pin.style.setProperty('--bw', bw + 'px');
       pin.style.setProperty('--bx', bx + 'px');
+    }
+
+    function swap(box, txt) {
+      if (!box) return;
+      const s = box.querySelector('span');
+      if (!s || s.textContent === txt) return;
+      box.classList.add('swap');
+      s.textContent = txt;
+      void box.offsetWidth;
+      box.classList.remove('swap');
     }
 
     function setActive(idx) {
@@ -2489,13 +2399,9 @@ $('.model_card_top').on({
 
       listItems.forEach((li, i) => li.classList.toggle('on', i === idx));
 
-      if (wmCat) wmCat.querySelector('span').textContent = p.type;
-      if (wmNum) wmNum.querySelector('span').textContent = `${p.num} / 08`;
-      if (wmClient) wmClient.textContent = p.name;
-      if (wmDesc) wmDesc.textContent = p.desc;
-      if (wmResult) wmResult.textContent = p.result;
-      if (wmBtn) wmBtn.href = p.link;
-      if (progNum) progNum.textContent = `${p.num} / 08`;
+      swap(wmCat, p.cat);
+      swap(wmType, p.type);
+      swap(wmNum, p.num);
 
       if (prev !== -1 && brL && brR) {
         brL.classList.remove('kick');
@@ -2506,19 +2412,17 @@ $('.model_card_top').on({
       }
 
       thumbs.forEach((th, i) => {
-        const vid = th.querySelector('video');
-        if (vid) {
-          if (i === idx) {
-            if (vid.paused) vid.play().catch(() => {});
-          } else {
-            if (!vid.paused) vid.pause();
-          }
+        if (i === idx) {
+          th.setAttribute('data-cursor', '-exclusion -lg');
+          th.setAttribute('data-cursor-text', 'СМОТРЕТЬ');
+        } else {
+          th.setAttribute('data-cursor', '-exclusion -md');
+          th.removeAttribute('data-cursor-text');
         }
       });
     }
 
     function render(f) {
-      if (window.innerWidth <= 991) return;
       const vh = window.innerHeight;
       const sc = [];
       const cs = [];
@@ -2527,7 +2431,7 @@ $('.model_card_top').on({
       for (let i = 0; i < n; i++) {
         const k = Math.max(0, Math.min(1, 1 - Math.abs(i - f)));
         const easedK = Math.sin((k * Math.PI) / 2);
-        sc[i] = 0.85 + 0.38 * easedK; // inactive 0.85, active 1.23
+        sc[i] = 1.0 + 0.32 * easedK; // inactive 1.0, active 1.32
         const hh = ih * sc[i];
         cs[i] = yy + hh / 2;
         yy += hh + gap;
@@ -2554,13 +2458,13 @@ $('.model_card_top').on({
         const opacity = (0.28 + 0.72 * k).toFixed(3);
 
         el.style.transform = `translate3d(0, ${topOffset}px, 0) scale(${scale})`;
-        el.style.filter = `grayscale(${grayscale}) brightness(${0.45 + 0.55 * k})`;
+        el.style.filter = `grayscale(${grayscale}) brightness(${0.5 + 0.5 * k})`;
         el.style.opacity = opacity;
         el.style.zIndex = Math.round(10 + k * 10);
       }
 
       // Left list vertical tracking
-      list.style.transform = `translate3d(0, ${(vh / 2 - 16 - f * 34).toFixed(1)}px, 0)`;
+      list.style.transform = `translate3d(0, ${(vh / 2 - 10 - f * 22).toFixed(1)}px, 0)`;
 
       // Progress bar fill
       const p = Math.max(0, Math.min(1, f / (n - 1)));
@@ -2580,7 +2484,6 @@ $('.model_card_top').on({
     }
 
     function onScroll() {
-      if (window.innerWidth <= 991) return;
       const r = sec.getBoundingClientRect();
       const vh = window.innerHeight;
       const total = r.height - vh;
