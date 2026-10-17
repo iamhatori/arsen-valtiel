@@ -65,7 +65,15 @@
 </style>
 <style>@media (max-width:700px){.av_cases_grid{grid-template-columns:1fr!important}.av_cases_heading{flex-direction:column;align-items:flex-start!important;gap:12px!important}}</style>
 <style>
-@media (max-width: 768px) {
+/* Prevent Webflow mobile overlay menu from locking whole screen on tablets & mobile */
+.nav_menu_wrap {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  background: transparent !important;
+  z-index: auto !important;
+}
+@media (max-width: 991px) {
   .nav_menu_wrap {
     display: none !important;
   }
@@ -984,7 +992,7 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
     <div class="cases_noir_header">
       <div class="cases_noir_tag">
         <span class="live_dot"></span>
-        <span>[03] SELECTED WORKS & DIRECTING</span>
+        <span>[01] КЕЙСЫ</span>
         <sup class="count_sup">{08}</sup>
       </div>
     </div>
@@ -1094,9 +1102,9 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
           <div class="cases_picker_top_bar">
             <div class="cases_picker_tag">
               <span class="live_dot"></span>
-              <span>03 // ИЗБРАННЫЕ КЕЙСЫ</span>
+              <span>[01] КЕЙСЫ</span>
             </div>
-            <div class="cases_picker_step_count" id="casesPickerStepCount">[ ВЫБОР КЕЙСА ]</div>
+            <div class="cases_picker_step_count" id="casesPickerStepCount">[ 1 / 8 ]</div>
           </div>
 
           <!-- Mini Screen -->
@@ -1575,58 +1583,18 @@ pageFunctions.executeFunctions();
 </script>
 
 <script>
-// MOBILE MENU
-document.querySelector('.nav_mobile_menu').addEventListener('click', function () {
-  const navMenuWrap = document.querySelector('.nav_menu_wrap');
-  const navMobileMenu = document.querySelector('.nav_mobile_menu');
-  const navMenuLinks = document.querySelectorAll('.nav_menu_link');
-  const navMenuBottom = document.querySelector('.nav_menu_bottom');
-  const navMenuDividers = document.querySelectorAll('.nav_menu_divider');
-
-  gsap.set(navMenuLinks, {
-    opacity: 0,
-    y: 20,
+// Mobile nav link smooth scroll to #cases
+const mobCaseBtn = document.querySelector('.nav_mobile_menu');
+if (mobCaseBtn) {
+  mobCaseBtn.addEventListener('click', function(e) {
+    const casesEl = document.getElementById('cases');
+    if (casesEl) {
+      e.preventDefault();
+      casesEl.scrollIntoView({ behavior: 'smooth' });
+    }
   });
-
-  if (navMenuWrap.style.display === 'none' || navMenuWrap.style.display === '') {
-    navMenuWrap.style.display = 'flex';
-    navMobileMenu.textContent = 'Close';
-
-    gsap.to(navMenuLinks, {
-      opacity: 1,
-      y: 0,
-      duration: 0.4,
-      stagger: {
-        each: 0.1,
-        onComplete: function () {
-          this.targets()[0].style.opacity = 1;
-        }
-      }
-    });
-
-    gsap.from(navMenuDividers, {
-      scaleX: 0,
-      duration: 0.4,
-      stagger: {
-        each: 0.1
-      }
-    }, "<");
-
-    gsap.from(navMenuBottom, {
-      opacity: 0,
-      x: 100,
-      duration: 0.4
-    }, "-=50%");
-
-    document.body.classList.add('no-scroll');
-
-  } else {
-    navMenuWrap.style.display = 'none';
-    navMobileMenu.textContent = 'Menu';
-
-    document.body.classList.remove('no-scroll');
-  }
-});
+}
+</script>
 
 $('.internal_back_link').on('click', function() {
 	window.history.back()
@@ -2421,7 +2389,7 @@ $(document).ready(function() {
 }
 .cases_picker_screen_wrap {
   width: 100%;
-  max-width: 320px;
+  max-width: clamp(340px, 94vw, 440px);
   display: flex;
   justify-content: center;
 }
@@ -2429,11 +2397,22 @@ $(document).ready(function() {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
   background: #090909;
   border: 1px solid rgba(255, 255, 255, 0.16);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.9);
+}
+@media (min-width: 600px) and (max-width: 991px) {
+  .cases_picker_screen_wrap {
+    max-width: 520px;
+  }
+  .cases_wheel_container {
+    max-width: 480px;
+  }
+  .cases_picker_top_bar {
+    max-width: 520px;
+  }
 }
 .cases_picker_caption_wrap {
   width: 100%;
@@ -3111,12 +3090,65 @@ $(document).ready(function() {
         }
       }
 
+      // ДОВОДЧИК НА РУЛЕТКЕ (Magnetic snap to nearest case)
+      let snapTimeout = null;
+      let isSnapping = false;
+      let isTouching = false;
+
+      function triggerSnap() {
+        if (isSnapping || isTouching) return;
+        if (window.innerWidth > 991) return;
+
+        const rect = mobileRunway.getBoundingClientRect();
+        const navHeight = 72;
+        const runwayH = mobileRunway.offsetHeight;
+        const viewH = window.innerHeight - navHeight;
+        const maxScroll = Math.max(1, runwayH - viewH);
+        const currentScrolled = -(rect.top - navHeight);
+
+        // Only snap if actively inside the cases runway
+        if (currentScrolled < 20 || currentScrolled > maxScroll - 20) return;
+
+        const progress = currentScrolled / maxScroll;
+        const totalIntervals = wheelRows.length - 1;
+        const activeFloat = progress * totalIntervals;
+        const nearestStep = Math.round(activeFloat);
+
+        if (Math.abs(activeFloat - nearestStep) > 0.02) {
+          const runwayTop = mobileRunway.getBoundingClientRect().top + window.scrollY;
+          const targetY = runwayTop - navHeight + (nearestStep / totalIntervals) * maxScroll;
+          isSnapping = true;
+          window.scrollTo({
+            top: targetY,
+            behavior: 'smooth'
+          });
+          setTimeout(() => {
+            isSnapping = false;
+          }, 350);
+        }
+      }
+
       function onScroll() {
         if (!ticking) {
           requestAnimationFrame(updateMobileWheel);
           ticking = true;
         }
+        clearTimeout(snapTimeout);
+        if (!isSnapping && !isTouching) {
+          snapTimeout = setTimeout(triggerSnap, 140);
+        }
       }
+
+      window.addEventListener('touchstart', () => {
+        isTouching = true;
+        clearTimeout(snapTimeout);
+      }, { passive: true });
+
+      window.addEventListener('touchend', () => {
+        isTouching = false;
+        clearTimeout(snapTimeout);
+        snapTimeout = setTimeout(triggerSnap, 100);
+      }, { passive: true });
 
       // Tap on row to spin smoothly directly to it
       wheelRows.forEach((row, j) => {
