@@ -268,16 +268,6 @@ html, body {
 </style>
 
 </head><body data-theme="dark">
-<!-- INTRO — скопируй этот блок целиком на свой сайт, наверх <body> -->
-<div aria-hidden="true" id="loco-intro">
-<!-- slices рендерятся сюда JS-ом -->
-<div id="loco-slices" style="position:absolute;inset:0"></div>
-<!-- чистый центр (in / hold / out) -->
-<div class="loco-center" id="loco-center" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0">
-<div class="loco-serif" id="loco-text">ARSEN VALTIEL</div>
-</div>
-</div>
-<!-- /INTRO -->
 <div class="page_wrap"><div class="page_code_wrap"><div class="page_code_base w-embed"><style>
 /* variables */
 :root {
@@ -902,12 +892,12 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
       </a>
 </div>
 </div>
-</nav><div class="player_overlay_wrap" vimeo-player=""><div class="player_overlay_contain u-container"><div class="player_overlay_layout u-grid-custom"><div class="player_overlay_mask u-column-indent"><div class="player_overlay_video w-embed w-iframe"><video autoplay="" controls="" loop="" muted="" playsinline="" src="hero-bg.mp4" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover"></video></div></div></div></div><div class="player_overlay_close" data-cursor="-color-accent-black" data-cursor-text="Close"></div></div><main class="page_main">
+</nav><div class="player_overlay_wrap" vimeo-player=""><div class="player_overlay_contain u-container"><div class="player_overlay_layout u-grid-custom"><div class="player_overlay_mask u-column-indent"><div class="player_overlay_video w-embed w-iframe"><video autoplay="" controls="" loop="" muted="" playsinline="" preload="metadata" poster="assets/hero-poster.jpg" src="hero-bg.mp4" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover"></video></div></div></div></div><div class="player_overlay_close" data-cursor="-color-accent-black" data-cursor-text="Close"></div></div><main class="page_main">
 <!-- 01 // ПЕРВЫЙ ЭКРАН (HERO) -->
 <section class="home_hero_alt_wrap" data-theme="dark" style="position:relative;overflow:hidden">
 <div class="g_visual_wrap u-cover-absolute">
 <div class="g_visual_background u-cover-absolute"></div>
-<video autoplay="" class="g_visual_video u-cover-absolute" loop="" muted="" playsinline="" src="hero-bg.mp4" style="filter:brightness(0.65) contrast(1.1)"></video>
+<video autoplay="" class="g_visual_video u-cover-absolute" loop="" muted="" playsinline="" preload="auto" poster="assets/hero-poster.jpg" src="hero-bg.mp4" style="filter:brightness(0.65) contrast(1.1)"></video>
 <div class="g_visual_overlay u-cover-absolute" style="background:radial-gradient(ellipse at center, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.85) 100%)"></div>
 </div>
 <div class="layout_full_contain u-container u-vflex-center-between u-height-screen" data-padding-bottom="large" data-padding-top="none" style="position:relative;z-index:2">
@@ -967,8 +957,8 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
 </section>
 <!-- 02.5 // DISPLAY HEADING // DU TEXTE AU CINÉMA (NOIR.IO 1:1) -->
 <section data-theme="inherit" class="display-heading_wrap">
-  <div data-padding-bottom="main" data-padding-top="main" class="display-heading_contain u-container">
-    <div class="display-heading_text">« DU TEXTE AU CINÉMA »</div>
+  <div class="display-heading_contain">
+    <div class="display-heading_text">« DU TEXTE AU CINÉMA » · « L'ART DU MONTAGE » · « DU TEXTE AU CINÉMA » · « L'ART DU MONTAGE » · « DU TEXTE AU CINÉMA »</div>
   </div>
 </section>
 
@@ -1179,7 +1169,7 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
 </section>
 
 <!-- 04 // КОНЦЕПТЫ (WITH OUVRE-PROD SCROLL REVEAL) -->
-<section class="concepts_section_wrap reveal" data-dir="up" data-theme="inherit" id="concepts" style="padding:clamp(70px,10vw,120px) 0;background:#080808;border-bottom:1px solid rgba(255,255,255,0.08)">
+<section class="concepts_section_wrap" data-theme="inherit" id="concepts" style="padding:clamp(48px,6vw,76px) 0;background:#080808;border-bottom:1px solid rgba(255,255,255,0.08)">
   <div class="u-container">
     <div style="margin-bottom:44px">
       <div style="font-size:11px;letter-spacing:0.2em;color:rgba(255,255,255,0.45);text-transform:uppercase;margin-bottom:8px">[04] концепты</div>
@@ -1253,13 +1243,13 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
 
 <!-- 04.5 // DISPLAY HEADING // L'ART DU MONTAGE (NOIR.IO 1:1) -->
 <section data-theme="inherit" class="display-heading_wrap">
-  <div data-padding-bottom="main" data-padding-top="main" class="display-heading_contain u-container">
-    <div class="display-heading_text">« L'ART DU MONTAGE »</div>
+  <div class="display-heading_contain">
+    <div class="display-heading_text">« L'ART DU MONTAGE » · « DU TEXTE AU CINÉMA » · « L'ART DU MONTAGE » · « DU TEXTE AU CINÉMA » · « L'ART DU MONTAGE »</div>
   </div>
 </section>
 
 <!-- 05 // ОБО МНЕ (ПОЛНОРАЗМЕРНЫЙ 12-КОЛОНОЧНЫЙ БЛОК БЕЗ ПУСТЫХ МЕСТ) -->
-<section class="about_section_wrap reveal" data-dir="up" data-theme="inherit" id="about" style="padding:clamp(80px,10vw,130px) 0;background:#050505;border-bottom:1px solid rgba(255,255,255,0.08)">
+<section class="about_section_wrap" data-theme="inherit" id="about" style="padding:clamp(48px,6vw,76px) 0;background:#050505;border-bottom:1px solid rgba(255,255,255,0.08)">
   <div class="u-container">
     <div style="font-size:11px;letter-spacing:0.2em;color:rgba(255,255,255,0.45);text-transform:uppercase;margin-bottom:16px">[05] à propos</div>
     
@@ -1313,7 +1303,7 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
 </section>
 
 <!-- 06 // НАПРАВЛЕНИЯ РАБОТЫ (ПОЛНОРАЗМЕРНАЯ СЕТКА 2x2 + ПОЛНОШИРИННЫЙ АУДИТ) -->
-<section class="services_section_wrap reveal" data-dir="up" data-theme="inherit" id="services" style="padding:clamp(80px,10vw,130px) 0;background:#080808;border-bottom:1px solid rgba(255,255,255,0.08)">
+<section class="services_section_wrap" data-theme="inherit" id="services" style="padding:clamp(48px,6vw,76px) 0;background:#080808;border-bottom:1px solid rgba(255,255,255,0.08)">
   <div class="u-container">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px;flex-wrap:wrap;gap:16px">
       <div>
@@ -1421,7 +1411,7 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
 </section>
 
 <!-- 07 // КАК РАБОТАЕМ (ПОЛНОШИРИННАЯ 4-КОЛОНОЧНАЯ ШКАЛА ПРОЦЕССА) -->
-<section class="process_section_wrap reveal" data-dir="up" data-theme="inherit" id="process" style="padding:clamp(80px,10vw,130px) 0;background:#050505;border-bottom:1px solid rgba(255,255,255,0.08)">
+<section class="process_section_wrap" data-theme="inherit" id="process" style="padding:clamp(48px,6vw,76px) 0;background:#050505;border-bottom:1px solid rgba(255,255,255,0.08)">
   <div class="u-container">
     <div style="margin-bottom:44px">
       <div style="font-size:11px;letter-spacing:0.2em;color:rgba(255,255,255,0.45);text-transform:uppercase;margin-bottom:8px">[07] как работаем</div>
@@ -1639,42 +1629,47 @@ cardItems.forEach((cardItem) => {
 let mmDisplay = gsap.matchMedia();
 
 mmDisplay.add("(min-width: 800px)", () => {
-	$(".display-heading_text").each(function () {
-  const heading = $(this);
-  const headingWidth = heading.outerWidth()/3;
+  $(".display-heading_text").each(function () {
+    const heading = $(this);
+    const wrap = heading.closest(".display-heading_wrap");
+    const shift = heading.outerWidth() / 4.5;
 
-  gsap.fromTo(heading, 
-              { x: headingWidth },
-              {
-    x: -headingWidth,
-    ease: "power1.inOut",
-    scrollTrigger: {
-      trigger: heading,
-      start: "top bottom",
-      end: "bottom top",
-      scrub: 1
-    }
+    gsap.fromTo(heading, 
+      { x: 0 },
+      {
+        x: -shift,
+        ease: "none",
+        scrollTrigger: {
+          trigger: wrap.length ? wrap[0] : heading[0],
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1
+        }
+      }
+    );
   });
-});
 });
 
 mmDisplay.add("(max-width: 799px)", () => {
-	$(".display-heading_text").each(function () {
-  const heading = $(this);
-  const headingWidth = heading.outerWidth();
+  $(".display-heading_text").each(function () {
+    const heading = $(this);
+    const wrap = heading.closest(".display-heading_wrap");
+    const shift = heading.outerWidth() / 4.5;
 
-  gsap.to(heading, 
-              {
-    x: -headingWidth,
-    ease: "power1.inOut",
-    scrollTrigger: {
-      trigger: heading,
-      start: "top bottom",
-      end: "bottom top",
-      scrub: .5
-    }
+    gsap.fromTo(heading, 
+      { x: 0 },
+      {
+        x: -shift,
+        ease: "none",
+        scrollTrigger: {
+          trigger: wrap.length ? wrap[0] : heading[0],
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 0.5
+        }
+      }
+    );
   });
-});
 });
 
 
@@ -1804,11 +1799,10 @@ function homeHeroAnimation(delay = 0){
 };
 
 (function(){
-let _heroStarted=false;
-function _startHeroNow(d){ if(_heroStarted) return; _heroStarted=true; homeHeroAnimation(typeof d==='number'?d:0); }
-window.__heroReveal=_startHeroNow;
-if(!document.getElementById('loco-intro')){ _startHeroNow(0); }
-setTimeout(function(){ if(!_heroStarted) _startHeroNow(0.12); }, 3400);
+  let _heroStarted = false;
+  function _startHeroNow(d){ if(_heroStarted) return; _heroStarted = true; homeHeroAnimation(typeof d==='number'?d:0); }
+  window.__heroReveal = _startHeroNow;
+  _startHeroNow(0);
 })();
 
 $(document).ready(function() {
@@ -1944,135 +1938,13 @@ $('.model_card_top').on({
 });
 });
 </script><script>
-/*
-  Locomotive slice intro — 1:1 копия с locomotive.ca
-  Как ставить на другой сайт:
-  1) Скопируй <div id="loco-intro">…</div> + <style> + <script> целиком в <head>/<body>.
-  2) Поменяй текст: TEXT ниже или <div id="loco-text">.
-  3) Интро показывается 1 раз за сессию (sessionStorage). Добавь ?intro=1 в URL чтобы форсить.
-  4) Для теста: sessionStorage.clear() + F5.
-  5) Зависимостей нет — чистый HTML/CSS/JS. Шрифт подтягивается с Google Fonts, можешь заменить.
-*/
-(function(){
-  const TEXT = "ARSEN VALTIEL"; // ← поменяй тут
-  const el = document.getElementById("loco-intro");
-  const slicesEl = document.getElementById("loco-slices");
-  const centerEl = document.getElementById("loco-center");
-  const textEl = document.getElementById("loco-text");
-  if(!el || !slicesEl || !centerEl) return;
-  textEl.textContent = TEXT;
-
-  // ?intro=0 — пропустить интро
-  try{
-    const qp = new URLSearchParams(location.search);
-    if(qp.has("intro") && qp.get("intro")==="0"){ el.remove(); document.body.style.overflow=""; try{ window.__heroReveal&&window.__heroReveal(0); }catch(e){} return; }
-    if(!qp.has("intro") && sessionStorage.getItem("loco-intro-seen")==="1"){ el.remove(); try{ window.__heroReveal&&window.__heroReveal(0); }catch(e){} return; }
-    sessionStorage.setItem("loco-intro-seen","1");
-  }catch(e){}
-
-  if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){
-    el.classList.add("is-in"); centerEl.style.opacity="1";
-    try{ window.__heroReveal&&window.__heroReveal(0.08); }catch(e){} setTimeout(()=>{ el.style.transition="opacity 520ms ease"; el.style.opacity="0"; setTimeout(()=>el.remove(),560); }, 1300);
-    return;
+// INSTANT HERO PLAYBACK
+$(document).ready(function() {
+  const v = document.querySelector(".g_visual_video");
+  if (v) {
+    v.play().catch(function(e){ console.log("video play:", e); });
   }
-
-  document.body.style.overflow="hidden";
-  el.classList.add("is-in");
-  // первый кадр: показать центр
-  requestAnimationFrame(()=>{ centerEl.style.opacity="1"; });
-
-  function rand(a,b){ return a + Math.random()*(b-a); }
-  function makeSlices(n, span, vw){
-    const tmp=[]; let total=0;
-    for(let i=0;i<n;i++){
-      const isTear = Math.random()<0.12;
-      const h = isTear ? (Math.random()<0.5?1:2) : Math.round(rand(8,88));
-      const gap = i===n-1?0:Math.round(rand(isTear?1:4, isTear?14:22));
-      const dx = (Math.random()-0.55)*0.085*vw;
-      tmp.push({h,gap,dx}); total+=h+gap;
-    }
-    const scale = span/Math.max(total,1);
-    let y = -span/2; const out=[];
-    for(const t of tmp){
-      const h=Math.max(1,Math.round(t.h*scale));
-      const gap=Math.round(t.gap*scale);
-      out.push({h,gap,dx:t.dx, y: y+h/2}); y+=h+gap;
-    }
-    return out;
-  }
-  function renderSlices(slices, outX, opacity){
-    slicesEl.innerHTML="";
-    slicesEl.style.opacity = opacity!=null? String(opacity): "1";
-    slicesEl.style.transform = outX ? "translateX("+outX+"px)" : "";
-    centerEl.style.display = slices.length ? "none" : "flex";
-    for(const s of slices){
-      const row=document.createElement("div");
-      row.style.cssText="position:absolute;left:0;right:0;height:"+s.h+"px;top:calc(50% + "+s.y+"px);transform:translateX("+s.dx+"px);overflow:hidden;will-change:transform";
-      const inner=document.createElement("div");
-      inner.style.cssText="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);white-space:nowrap";
-      inner.className="loco-serif";
-      inner.textContent=TEXT;
-      row.appendChild(inner);
-      slicesEl.appendChild(row);
-    }
-  }
-
-  let slices=[];
-  let raf=0; const start=performance.now(); let lastGen=0;
-
-  function tick(now){
-    const t=(now-start)/1000;
-    if(t < 0.15){
-      // in — центр уже виден, slices пустые
-      slices=[]; slicesEl.innerHTML=""; centerEl.style.display="flex";
-      centerEl.style.opacity="1"; centerEl.style.transform="";
-    } else if(t < 0.75){
-      centerEl.style.display="none";
-      if(now-lastGen > 90){
-        lastGen=now;
-        const span = window.innerHeight*0.52 + rand(-18,18);
-        const n = Math.round(rand(11,16));
-        slices = makeSlices(n, span, window.innerWidth);
-        renderSlices(slices);
-      }
-    } else if(t < 1.45){
-      const p=(t-0.75)/0.70; const eased=1-Math.pow(1-p,3);
-      const span = 0.52*window.innerHeight*(1-eased) + 0.08*window.innerHeight*eased;
-      const n = Math.max(1, Math.round(16*(1-eased)+1*eased));
-      if(now-lastGen > 85){
-        lastGen=now;
-        slices = makeSlices(n, span, window.innerWidth*(1-eased*0.92));
-        renderSlices(slices);
-      }
-    } else if(t < 1.75){
-      slices=[]; slicesEl.innerHTML=""; centerEl.style.display="flex";
-      centerEl.style.opacity="1"; centerEl.style.transform="";
-    } else if(t < 2.45){
-      const p=Math.min(1,(t-1.75)/0.70); const eased=p*p;
-      const outX=eased*0.38*window.innerWidth;
-      const op=1-eased;
-      if(slices.length){
-        slicesEl.style.transform="translateX("+outX+"px)";
-        slicesEl.style.opacity=String(op);
-      } else {
-        centerEl.style.display="flex";
-        centerEl.style.opacity=String(op);
-        centerEl.style.transform="translateX("+outX+"px)";
-      }
-      if(p>=0.98){
-        el.style.transition="opacity 320ms ease";
-        el.style.opacity="0";
-        try{ window.__heroReveal&&window.__heroReveal(0.12); }catch(e){} setTimeout(()=>{ el.remove(); document.body.style.overflow=""; },340);
-        return;
-      }
-    } else {
-      try{ window.__heroReveal&&window.__heroReveal(0); }catch(e){} el.remove(); document.body.style.overflow=""; return;
-    }
-    raf=requestAnimationFrame(tick);
-  }
-  raf=requestAnimationFrame(tick);
-  window.addEventListener("resize", ()=>{ /* next tick пересчитает */ });
-})();
+});
 </script>
 <style>
 /* ───────── OUVRE-PROD SCROLL REVEALS ───────── */
@@ -2099,7 +1971,7 @@ $('.model_card_top').on({
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .display-heading_contain {
-  padding: clamp(90px, 13vh, 170px) 0;
+  padding: clamp(26px, 4.2vh, 46px) 0;
   width: 100%;
   max-width: 100%;
   overflow: visible;
@@ -2679,8 +2551,8 @@ $('.model_card_top').on({
         }
       });
     }, {
-      threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px'
+      threshold: 0.04,
+      rootMargin: '0px 0px 60px 0px'
     });
 
     reveals.forEach((el, idx) => {
