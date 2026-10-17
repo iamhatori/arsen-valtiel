@@ -965,17 +965,10 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
 </div>
 </div>
 </section>
-<!-- 02.5 // ФРАНЦУЗСКИЙ СЛОГАН #1 (PHOTO 2 & 3 - SCROLL DRIFT) -->
-<section class="french_slogan_wrap reveal" data-dir="up">
-  <div class="french_slogan_kicker">// DIRECTION ARTISTIQUE // 02</div>
-  <div class="french_slogan_drift_track">
-    <h2 class="french_slogan_headline drift_item" data-drift="1.15">« DU TEXTE AU CINÉMA »</h2>
-    <p class="french_slogan_body drift_item" data-drift="0.85">
-      Je transforme les mots en rythme, le texte en vidéo, le spectateur en client.
-    </p>
-  </div>
-  <div class="french_slogan_ru">
-    // превращаю сценарий и текст в кинематографичный видеоряд с высоким удержанием
+<!-- 02.5 // DISPLAY HEADING // DU TEXTE AU CINÉMA (NOIR.IO 1:1) -->
+<section data-theme="inherit" class="display-heading_wrap">
+  <div data-padding-bottom="main" data-padding-top="main" class="display-heading_contain u-container">
+    <div class="display-heading_text">« DU TEXTE AU CINÉMA »</div>
   </div>
 </section>
 
@@ -1258,17 +1251,10 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
   </div>
 </section>
 
-<!-- 04.5 // ФРАНЦУЗСКИЙ СЛОГАН #2 (PHOTO 2 & 3 - SCROLL DRIFT) -->
-<section class="french_slogan_wrap reveal" data-dir="up">
-  <div class="french_slogan_kicker">// PHILOSOPHIE DU MONTAGE // 05</div>
-  <div class="french_slogan_drift_track">
-    <h2 class="french_slogan_headline drift_item" data-drift="1.15">« L'ART DU RYTHME »</h2>
-    <p class="french_slogan_body drift_item" data-drift="0.85">
-      Le montage n'est pas un assemblage d'images. C'est l'art de captiver l'attention jusqu'à la dernière seconde.
-    </p>
-  </div>
-  <div class="french_slogan_ru">
-    // монтаж — это не склейка кадров. это управление вниманием зрителя до самого конца.
+<!-- 04.5 // DISPLAY HEADING // L'ART DU MONTAGE (NOIR.IO 1:1) -->
+<section data-theme="inherit" class="display-heading_wrap">
+  <div data-padding-bottom="main" data-padding-top="main" class="display-heading_contain u-container">
+    <div class="display-heading_text">« L'ART DU MONTAGE »</div>
   </div>
 </section>
 
@@ -2104,69 +2090,33 @@ $('.model_card_top').on({
 }
 
 /* ───────── FRENCH EDITORIAL MANIFESTOS (PHOTO 2 & 3) ───────── */
-.french_slogan_wrap {
-  background: #040404;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding: clamp(90px, 14vh, 160px) 0;
-  text-align: center;
+/* ───────── NOIR.IO DISPLAY HEADING (1:1 EXACT) ───────── */
+.display-heading_wrap {
   position: relative;
   overflow: hidden;
   width: 100%;
+  background: #000000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
-.french_slogan_kicker {
-  font-family: Inter, sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.24em;
-  color: rgba(255, 255, 255, 0.45);
-  text-transform: uppercase;
-  margin-bottom: 24px;
-  padding: 0 20px;
-}
-.french_slogan_drift_track {
+.display-heading_contain {
+  padding: clamp(90px, 13vh, 170px) 0;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  max-width: 100%;
   overflow: visible;
+  display: flex;
+  align-items: center;
 }
-.drift_item {
-  display: inline-block;
-  will-change: transform;
-  transform: translate3d(0, 0, 0);
-}
-.french_slogan_headline {
+.display-heading_text {
   font-family: 'Instrument Serif', Georgia, serif;
-  font-size: clamp(42px, 7vw, 92px);
+  font-size: clamp(80px, 12.5vw, 185px);
   font-weight: 400;
+  line-height: 0.95;
   letter-spacing: -0.03em;
-  line-height: 1.0;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin: 0 0 24px;
   white-space: nowrap;
-}
-.french_slogan_body {
-  font-family: 'Instrument Serif', Georgia, serif;
-  font-size: clamp(24px, 3.6vw, 46px);
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1.3;
-  color: rgba(255, 255, 255, 0.92);
-  margin: 0 auto;
-  max-width: 1060px;
-  word-break: keep-all;
-  hyphens: none;
-  padding: 0 24px;
-}
-.french_slogan_ru {
-  font-family: Inter, system-ui, sans-serif;
-  font-size: 13px;
-  letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.45);
-  margin-top: 24px;
-  text-transform: lowercase;
-  padding: 0 20px;
+  color: #ffffff;
+  will-change: transform;
+  user-select: none;
+  cursor: default;
 }
 
 /* ───────── CASES SPLIT STICKY SCROLL (PHOTO 1) ───────── */
@@ -2826,77 +2776,17 @@ $('.model_card_top').on({
     }
   }
 
-  // 4. French Slogans Scroll Drift (справа налево при скролле вниз, слева направо обратно)
-  function initFrenchSloganDrift() {
-    const sections = document.querySelectorAll('.french_slogan_wrap');
-    if (!sections.length) return;
-
-    const itemsData = Array.from(sections).map((sec) => {
-      const items = sec.querySelectorAll('.drift_item');
-      return {
-        sec,
-        items,
-        currentShift: 0,
-        targetShift: 0
-      };
-    });
-
-    function updateTargets() {
-      const vh = window.innerHeight;
-      const vw = window.innerWidth;
-      // Responsive shift amplitude
-      const maxShift = Math.min(vw * 0.28, 320);
-
-      itemsData.forEach((entry) => {
-        const rect = entry.sec.getBoundingClientRect();
-        const totalDist = vh + rect.height;
-        if (rect.bottom < -100 || rect.top > vh + 100) return; // offscreen
-
-        // progress: 0 when entering bottom, 0.5 when center, 1 when exiting top
-        const progress = Math.max(0, Math.min(1, (vh - rect.top) / totalDist));
-
-        // When scrolling DOWN: progress goes 0 -> 1, shift goes from +maxShift to -maxShift (RIGHT to LEFT)
-        // When scrolling UP: progress goes 1 -> 0, shift goes from -maxShift to +maxShift (LEFT to RIGHT)
-        entry.targetShift = (0.5 - progress) * (maxShift * 2);
-      });
-    }
-
-    function tick() {
-      itemsData.forEach((entry) => {
-        const diff = entry.targetShift - entry.currentShift;
-        if (Math.abs(diff) > 0.02) {
-          entry.currentShift += diff * 0.12; // buttery smooth easing
-          entry.items.forEach((item) => {
-            const factor = parseFloat(item.dataset.drift) || 1.0;
-            const x = (entry.currentShift * factor).toFixed(2);
-            item.style.transform = `translate3d(${x}px, 0, 0)`;
-          });
-        }
-      });
-      requestAnimationFrame(tick);
-    }
-
-    window.addEventListener('scroll', updateTargets, { passive: true });
-    window.addEventListener('resize', updateTargets, { passive: true });
-    updateTargets();
-    // Initialize currentShift to targetShift so there is no initial jump
-    itemsData.forEach((e) => { e.currentShift = e.targetShift; });
-    requestAnimationFrame(tick);
-  }
-
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
       initCursor();
       initScrollReveal();
       initCasesScroll();
-      initFrenchSloganDrift();
-    });
+          });
   } else {
     initCursor();
     initScrollReveal();
     initCasesScroll();
-    initFrenchSloganDrift();
-  }
+      }
 })();
 </script>
 </body>
