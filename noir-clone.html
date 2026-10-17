@@ -1035,6 +1035,10 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
             <div class="noir_screen_overlay"></div>
           </div>
         </div>
+        <!-- Desktop Mini Italic Caption -->
+        <div class="cases_desktop_caption" id="casesDesktopCaption">
+          <em>контент-стратегия · динамичный монтаж</em>
+        </div>
       </div>
 
       <!-- Right Column: Minimalist 2-3 Word Titles (Photo 2 & 3) -->
@@ -1074,12 +1078,98 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
       </div>
     </div>
 
-    <!-- Single Bottom Link (Portfolio Focus: "пускай будет ссылка в самом низу") -->
+    <!-- Single Bottom Link for Desktop -->
     <div class="cases_bottom_cta" style="margin-top:clamp(28px, 4vh, 48px);display:flex;justify-content:center">
       <a class="btn_noir_secondary" href="https://t.me/declineda" target="_blank" data-cursor="-exclusion -md">
         <span>смотреть все кейсы в telegram-канале @declineda</span>
         <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
+    </div>
+
+    <!-- Mobile iOS Drum Wheel Picker (Рулетка будильника iPhone) -->
+    <div class="cases_mobile_picker" id="casesMobilePicker">
+      <div class="cases_picker_runway" id="casesPickerRunway">
+        <div class="cases_picker_sticky" id="casesPickerSticky">
+          <!-- Top Tag Bar -->
+          <div class="cases_picker_top_bar">
+            <div class="cases_picker_tag">
+              <span class="live_dot"></span>
+              <span>03 // ИЗБРАННЫЕ КЕЙСЫ</span>
+            </div>
+            <div class="cases_picker_step_count" id="casesPickerStepCount">[ ВЫБОР КЕЙСА ]</div>
+          </div>
+
+          <!-- Mini Screen -->
+          <div class="cases_picker_screen_wrap">
+            <div class="cases_picker_screen" id="casesMobileScreen">
+              <div class="noir_screen_item is-active" data-index="0">
+                <video autoplay loop muted playsinline preload="auto" poster="assets/case-1.jpg" src="assets/case-1.mp4"></video>
+                <div class="noir_screen_overlay"></div>
+              </div>
+              <div class="noir_screen_item" data-index="1">
+                <video loop muted playsinline preload="metadata" poster="assets/case-2.jpg" src="assets/case-2.mp4"></video>
+                <div class="noir_screen_overlay"></div>
+              </div>
+              <div class="noir_screen_item" data-index="2">
+                <video loop muted playsinline preload="metadata" poster="assets/case-3.jpg" src="assets/case-3.mp4"></video>
+                <div class="noir_screen_overlay"></div>
+              </div>
+              <div class="noir_screen_item" data-index="3">
+                <video loop muted playsinline preload="metadata" poster="assets/case-4.jpg" src="assets/case-4.mp4"></video>
+                <div class="noir_screen_overlay"></div>
+              </div>
+              <div class="noir_screen_item" data-index="4">
+                <video loop muted playsinline preload="metadata" poster="assets/case-5.jpg" src="assets/case-5.mp4"></video>
+                <div class="noir_screen_overlay"></div>
+              </div>
+              <div class="noir_screen_item" data-index="5">
+                <video loop muted playsinline preload="metadata" poster="assets/case-6.jpg" src="assets/case-6.mp4"></video>
+                <div class="noir_screen_overlay"></div>
+              </div>
+              <div class="noir_screen_item" data-index="6">
+                <video loop muted playsinline preload="metadata" poster="assets/case-7.jpg" src="assets/case-7.mp4"></video>
+                <div class="noir_screen_overlay"></div>
+              </div>
+              <div class="noir_screen_item" data-index="7">
+                <video loop muted playsinline preload="metadata" poster="assets/case-8.jpg" src="assets/case-8.mp4"></video>
+                <div class="noir_screen_overlay"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Italic Subtitle directly under mini video -->
+          <div class="cases_picker_caption_wrap">
+            <div class="cases_picker_caption" id="casesMobileCaption">
+              <em>scroll — крути колесо вниз ↓</em>
+            </div>
+          </div>
+
+          <!-- 3D iOS Drum / Roulette Wheel -->
+          <div class="cases_wheel_container" id="casesWheelContainer">
+            <div class="wheel_lens"></div>
+            <div class="wheel_cylinder" id="wheelCylinder">
+              <div class="wheel_row is-boundary is-center" data-step="0"><span class="wheel_txt">—</span></div>
+              <div class="wheel_row" data-step="1"><span class="wheel_txt">Што за тим</span></div>
+              <div class="wheel_row" data-step="2"><span class="wheel_txt">Семён Гельфенбуйм</span></div>
+              <div class="wheel_row" data-step="3"><span class="wheel_txt">Javier Leyenda</span></div>
+              <div class="wheel_row" data-step="4"><span class="wheel_txt">Armando Performance</span></div>
+              <div class="wheel_row" data-step="5"><span class="wheel_txt">Matvey Forgeon</span></div>
+              <div class="wheel_row" data-step="6"><span class="wheel_txt">Rossi App Promo</span></div>
+              <div class="wheel_row" data-step="7"><span class="wheel_txt">Skills Better</span></div>
+              <div class="wheel_row" data-step="8"><span class="wheel_txt">Joseph Editing</span></div>
+              <div class="wheel_row is-boundary" data-step="9"><span class="wheel_txt">—</span></div>
+            </div>
+          </div>
+
+          <!-- Bottom Link for Mobile -->
+          <div class="cases_mobile_bottom_link">
+            <a class="btn_noir_secondary_mini" href="https://t.me/declineda" target="_blank">
+              <span>все кейсы в @declineda</span>
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -2248,30 +2338,204 @@ $(document).ready(function() {
   transform: scale(1);
 }
 
-/* Mobile Responsive (Zero Sticky Trapping, Natural Smooth Scrolling) */
+/* Desktop Italic Caption under Video */
+.cases_desktop_caption {
+  margin-top: 14px;
+  font-family: Newsreader, "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: clamp(14px, 1.15vw, 18px);
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.02em;
+  min-height: 24px;
+  transition: opacity 0.2s ease;
+}
+
+/* ───────── MOBILE IOS DRUM WHEEL PICKER (iPhone Alarm Style) ───────── */
+.cases_mobile_picker {
+  display: none;
+  width: 100%;
+}
+
 @media (max-width: 991px) {
   .cases_noir_layout {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    display: none !important;
   }
-  .cases_noir_left {
-    position: relative;
-    top: auto;
-    z-index: 2;
-    padding-bottom: 0;
-    background: transparent;
+  .cases_bottom_cta {
+    display: none !important;
   }
-  .cases_noir_screen {
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  .cases_noir_header {
+    display: none !important;
   }
-  .noir_case_title {
-    font-size: clamp(24px, 6vw, 36px);
+  .cases_noir_section {
+    padding: 0 !important;
+    border-bottom: none !important;
   }
-  .noir_case_row {
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  .cases_mobile_picker {
+    display: block !important;
   }
+}
+
+.cases_picker_runway {
+  position: relative;
+  height: 380vh;
+  width: 100%;
+}
+.cases_picker_sticky {
+  position: sticky;
+  top: 72px; /* Perfect clearance below fixed navbar (height ~64-70px) */
+  height: calc(100vh - 72px);
+  height: calc(100dvh - 72px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px 14px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #000000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.cases_picker_top_bar {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0 4px;
+}
+.cases_picker_tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+  font-weight: 500;
+}
+.cases_picker_step_count {
+  font-family: monospace, monospace;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.45);
+}
+.cases_picker_screen_wrap {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  justify-content: center;
+}
+.cases_picker_screen {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #090909;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
+}
+.cases_picker_caption_wrap {
+  width: 100%;
+  text-align: center;
+  min-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cases_picker_caption {
+  font-family: Newsreader, "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.02em;
+  transition: opacity 0.18s ease;
+}
+.cases_wheel_container {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  height: 210px;
+  perspective: 1100px;
+  overflow: hidden;
+  user-select: none;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,1) 22%, rgba(0,0,0,1) 78%, transparent 100%);
+  mask-image: linear-gradient(180deg, transparent 0%, rgba(0,0,0,1) 22%, rgba(0,0,0,1) 78%, transparent 100%);
+}
+.wheel_lens {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  right: 2%;
+  transform: translateY(-50%);
+  height: 42px;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.035);
+  pointer-events: none;
+  z-index: 4;
+}
+.wheel_cylinder {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+.wheel_row {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 42px;
+  margin-top: -21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  will-change: transform, opacity;
+}
+.wheel_txt {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.wheel_row.is-boundary .wheel_txt {
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  color: rgba(255, 255, 255, 0.5);
+}
+.wheel_row.is-center .wheel_txt {
+  font-weight: 600;
+  color: #ffffff;
+}
+.cases_mobile_bottom_link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 2px;
+}
+.btn_noir_secondary_mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: Inter, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.btn_noir_secondary_mini:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
 }
 
 /* ───────── SECTION 05 ABOUT BENTO & METRICS FIX ───────── */
@@ -2669,29 +2933,39 @@ $(document).ready(function() {
     });
   }
 
-  // 3. Noir.io Capabilities / Cases Showcase (Hover to Play + Minimalist Titles)
+  // 3. Noir.io Capabilities / Cases Showcase (Desktop Minimalist 2-Col + Mobile iOS Wheel Picker)
   function initNoirCases() {
     const sec = document.getElementById('cases');
     if (!sec) return;
 
-    const rows = document.querySelectorAll('.noir_case_row');
-    const screenItems = document.querySelectorAll('.noir_screen_item');
-    const screen = document.getElementById('casesNoirScreen');
-    if (!rows.length || !screenItems.length) return;
+    const DESCRIPTIONS = [
+      "контент-стратегия · динамичный монтаж",
+      "рилс · кинематографичный ритм",
+      "вирусный сторителлинг · саунд-дизайн",
+      "перформанс · цветокоррекция",
+      "youtube-формат · удержание аудитории",
+      "продуктовый промо · 3d-графика",
+      "edtech · визуальные хуки",
+      "авторский стиль · темпоритм"
+    ];
 
-    let activeIdx = 0;
+    // ==========================================
+    // A. DESKTOP LOGIC (> 991px)
+    // ==========================================
+    const desktopRows = document.querySelectorAll('#casesNoirList .noir_case_row');
+    const desktopScreenItems = document.querySelectorAll('#casesNoirScreen .noir_screen_item');
+    const desktopCaption = document.getElementById('casesDesktopCaption');
+    const desktopScreen = document.getElementById('casesNoirScreen');
 
-    function activateCase(idx, playVideo = true) {
-      if (idx < 0 || idx >= rows.length) return;
-      activeIdx = idx;
+    let activeDesktopIdx = 0;
 
-      // Update rows
-      rows.forEach((r, i) => {
-        r.classList.toggle('is-active', i === idx);
-      });
+    function activateDesktopCase(idx, playVideo = true) {
+      if (idx < 0 || idx >= desktopRows.length) return;
+      activeDesktopIdx = idx;
 
-      // Update videos
-      screenItems.forEach((si, i) => {
+      desktopRows.forEach((r, i) => r.classList.toggle('is-active', i === idx));
+
+      desktopScreenItems.forEach((si, i) => {
         const isTarget = i === idx;
         si.classList.toggle('is-active', isTarget);
         const vid = si.querySelector('video');
@@ -2705,32 +2979,24 @@ $(document).ready(function() {
           }
         }
       });
+
+      if (desktopCaption && DESCRIPTIONS[idx]) {
+        desktopCaption.style.opacity = '0';
+        setTimeout(() => {
+          desktopCaption.innerHTML = `<em>${DESCRIPTIONS[idx]}</em>`;
+          desktopCaption.style.opacity = '1';
+        }, 120);
+      }
     }
 
-    // Hover & Click on Rows (in-place activation without redirect)
-    rows.forEach((row, i) => {
-      row.addEventListener('mouseenter', () => {
-        activateCase(i, true);
-      });
-
-      row.addEventListener('click', (e) => {
-        activateCase(i, true);
-        if (window.innerWidth <= 991 && screen) {
-          const rect = screen.getBoundingClientRect();
-          if (rect.top < 80 || rect.bottom < 160) {
-            window.scrollTo({
-              top: window.scrollY + rect.top - 90,
-              behavior: 'smooth'
-            });
-          }
-        }
-      });
+    desktopRows.forEach((row, i) => {
+      row.addEventListener('mouseenter', () => activateDesktopCase(i, true));
+      row.addEventListener('click', () => activateDesktopCase(i, true));
     });
 
-    // Clicking Screen toggles playback (no redirect)
-    if (screen) {
-      screen.addEventListener('click', (e) => {
-        const activeVid = screen.querySelector('.noir_video_item.active video');
+    if (desktopScreen) {
+      desktopScreen.addEventListener('click', () => {
+        const activeVid = desktopScreen.querySelector('.noir_screen_item.is-active video');
         if (activeVid) {
           if (activeVid.paused) activeVid.play().catch(() => {});
           else activeVid.pause();
@@ -2738,15 +3004,13 @@ $(document).ready(function() {
       });
     }
 
-    // Natural scroll tracking (highlights row in center viewport)
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver((entries) => {
+        if (window.innerWidth <= 991) return;
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const idx = parseInt(entry.target.getAttribute('data-index'), 10);
-            if (!isNaN(idx)) {
-              activateCase(idx, true);
-            }
+            if (!isNaN(idx)) activateDesktopCase(idx, true);
           }
         });
       }, {
@@ -2754,12 +3018,123 @@ $(document).ready(function() {
         rootMargin: '-35% 0px -35% 0px',
         threshold: 0.1
       });
-
-      rows.forEach(r => observer.observe(r));
+      desktopRows.forEach(r => observer.observe(r));
     }
 
-    // Initial activation
-    activateCase(0, true);
+    activateDesktopCase(0, true);
+
+    // ==========================================
+    // B. MOBILE IOS DRUM WHEEL PICKER (<= 991px)
+    // ==========================================
+    const mobileRunway = document.getElementById('casesPickerRunway');
+    const mobileScreenItems = document.querySelectorAll('#casesMobileScreen .noir_screen_item');
+    const mobileCaption = document.getElementById('casesMobileCaption');
+    const stepCountEl = document.getElementById('casesPickerStepCount');
+    const wheelRows = document.querySelectorAll('#wheelCylinder .wheel_row');
+
+    if (mobileRunway && wheelRows.length) {
+      let lastMobileStep = -1;
+      let ticking = false;
+
+      function setMobileVideo(targetIdx) {
+        mobileScreenItems.forEach((item, idx) => {
+          const isTarget = idx === targetIdx;
+          item.classList.toggle('is-active', isTarget);
+          const vid = item.querySelector('video');
+          if (vid) {
+            if (isTarget) {
+              const p = vid.play();
+              if (p) p.catch(() => {});
+            } else {
+              vid.pause();
+            }
+          }
+        });
+      }
+
+      function updateMobileWheel() {
+        ticking = false;
+        if (window.innerWidth > 991) return;
+
+        const rect = mobileRunway.getBoundingClientRect();
+        const navHeight = 72; // Space left below fixed header
+        const runwayH = mobileRunway.offsetHeight;
+        const viewH = window.innerHeight - navHeight;
+        const maxScroll = Math.max(1, runwayH - viewH);
+
+        // progress: 0 when top of runway reaches navHeight, 1 when bottom reached
+        const currentScrolled = Math.max(0, Math.min(maxScroll, -(rect.top - navHeight)));
+        const progress = currentScrolled / maxScroll;
+
+        const totalIntervals = wheelRows.length - 1; // 9 intervals for 10 rows
+        const activeFloat = progress * totalIntervals;
+        const activeStep = Math.max(0, Math.min(wheelRows.length - 1, Math.round(activeFloat)));
+
+        // 3D Drum cylinder transform for each row
+        wheelRows.forEach((row, j) => {
+          const diff = j - activeFloat;
+          const rot = -diff * 22; // rotateX in degrees
+          const ty = diff * 42;   // translateY in px
+          const tz = -Math.abs(diff) * 28; // translateZ depth in px
+          const sc = Math.max(0.72, 1 - Math.abs(diff) * 0.08);
+          const op = Math.max(0.12, 1 - Math.abs(diff) * 0.44);
+
+          row.style.transform = `translate3d(0, ${ty}px, ${tz}px) rotateX(${rot}deg) scale(${sc})`;
+          row.style.opacity = String(op);
+          const isCenter = Math.abs(diff) < 0.48;
+          row.classList.toggle('is-center', isCenter);
+        });
+
+        // Step changes
+        if (activeStep !== lastMobileStep) {
+          lastMobileStep = activeStep;
+
+          if (activeStep === 0) {
+            // Top boundary '—'
+            if (stepCountEl) stepCountEl.textContent = '[ КЕЙСЫ ]';
+            if (mobileCaption) mobileCaption.innerHTML = '<em>scroll — крути колесо вниз ↓</em>';
+            setMobileVideo(0);
+          } else if (activeStep >= 1 && activeStep <= 8) {
+            // Cases 1..8
+            const caseIdx = activeStep - 1;
+            if (stepCountEl) stepCountEl.textContent = `[ ${activeStep} / 8 ]`;
+            if (mobileCaption && DESCRIPTIONS[caseIdx]) {
+              mobileCaption.innerHTML = `<em>${DESCRIPTIONS[caseIdx]}</em>`;
+            }
+            setMobileVideo(caseIdx);
+          } else if (activeStep === 9) {
+            // Bottom boundary '—' (safety buffer so user doesn't fly off last case)
+            if (stepCountEl) stepCountEl.textContent = '[ 8 / 8 ]';
+            if (mobileCaption) mobileCaption.innerHTML = '<em>все кейсы · листайте дальше ↓</em>';
+            setMobileVideo(7);
+          }
+        }
+      }
+
+      function onScroll() {
+        if (!ticking) {
+          requestAnimationFrame(updateMobileWheel);
+          ticking = true;
+        }
+      }
+
+      // Tap on row to spin smoothly directly to it
+      wheelRows.forEach((row, j) => {
+        row.addEventListener('click', () => {
+          const navHeight = 72;
+          const runwayTop = mobileRunway.getBoundingClientRect().top + window.scrollY;
+          const runwayH = mobileRunway.offsetHeight;
+          const viewH = window.innerHeight - navHeight;
+          const maxScroll = Math.max(1, runwayH - viewH);
+          const targetY = runwayTop - navHeight + (j / (wheelRows.length - 1)) * maxScroll;
+          window.scrollTo({ top: targetY, behavior: 'smooth' });
+        });
+      });
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      updateMobileWheel();
+    }
   }
 
   if (document.readyState === 'loading') {
