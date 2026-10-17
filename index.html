@@ -977,253 +977,131 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
   </div>
 </section>
 
-<!-- 03 // ИЗБРАННЫЕ КЕЙСЫ (БЕЗ ФИКСАЦИИ СКРОЛЛА + 3-СТРОЧНАЯ СВЕТЯЩАЯСЯ ЛЕНТА) -->
-<section class="cases_interactive_section" id="cases">
+<!-- 03 // ИЗБРАННЫЕ КЕЙСЫ (1:1 NOIR.IO CAPABILITIES / SELECTED WORKS) -->
+<section class="cases_noir_section" id="cases">
   <div class="u-container">
     <!-- Top Header Bar -->
-    <div class="cases_top_header">
-      <div class="cases_tag_title">
+    <div class="cases_noir_header">
+      <div class="cases_noir_tag">
         <span class="live_dot"></span>
         <span>[03] SELECTED WORKS & DIRECTING</span>
         <sup class="count_sup">{08}</sup>
       </div>
-      <div class="cases_hint_text">клик по строкам ленты · стрелки · свайп</div>
     </div>
 
-    <!-- Main Responsive Layout: Left Video Preview + Right 3-Line Illuminated Reel -->
-    <div class="cases_reel_layout">
-      <!-- Left Column: Visual Stage (Active Video / Photo Preview) -->
-      <div class="cases_visual_stage">
-        <div class="cases_screen_frame" id="casesScreenFrame">
-          <!-- 8 Visual Cards (Crossfade) -->
-          <div class="case_visual_item active" data-index="0" data-link="https://youtu.be/I3W5YqmL8E8">
-            <img src="assets/case-1.jpg" alt="што за тим" loading="eager">
-            <div class="visual_gradient_overlay"></div>
-            <div class="visual_meta_top">
-              <span class="v_badge category">YouTube Storytelling</span>
-              <span class="v_badge metric">330 000 просмотров</span>
-            </div>
-            <div class="visual_center_play">
-              <div class="play_circle_glow">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
-            <div class="visual_meta_bottom">
-              <div class="v_project_title">што за тим</div>
-              <a class="v_watch_btn" href="https://youtu.be/I3W5YqmL8E8" target="_blank" data-cursor="-exclusion -md">
-                <span>смотреть кейс</span>
-                <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
+    <!-- 2-Column Noir.io Layout: Left Sticky Video + Right Minimalist List (Photo 2 & 3) -->
+    <div class="cases_noir_layout">
+      <!-- Left Column: Sticky Video Preview Frame -->
+      <div class="cases_noir_left">
+        <div class="cases_noir_screen" id="casesNoirScreen">
+          <!-- 8 Instant Case Videos (Hover to Play & Crossfade) -->
+          <div class="noir_screen_item is-active" data-index="0" data-link="https://youtu.be/I3W5YqmL8E8">
+            <video autoplay loop muted playsinline preload="auto" poster="assets/case-1.jpg" src="assets/case-1.mp4"></video>
+            <div class="noir_screen_overlay"></div>
+            <a class="noir_screen_pill" href="https://youtu.be/I3W5YqmL8E8" target="_blank" data-cursor="-exclusion -md">
+              <span>смотреть кейс</span>
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
 
-          <div class="case_visual_item" data-index="1" data-link="https://t.me/declineda/67">
-            <img src="assets/case-2.jpg" alt="Семён Гельфенбуйм" loading="lazy">
-            <div class="visual_gradient_overlay"></div>
-            <div class="visual_meta_top">
-              <span class="v_badge category">VSL / Продающее видео</span>
-              <span class="v_badge metric">Запуск на 1 000 000+ ₽</span>
-            </div>
-            <div class="visual_center_play">
-              <div class="play_circle_glow">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
-            <div class="visual_meta_bottom">
-              <div class="v_project_title">Семён Гельфенбуйм</div>
-              <a class="v_watch_btn" href="https://t.me/declineda/67" target="_blank" data-cursor="-exclusion -md">
-                <span>смотреть кейс</span>
-                <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
+          <div class="noir_screen_item" data-index="1" data-link="https://t.me/declineda/67">
+            <video loop muted playsinline preload="metadata" poster="assets/case-2.jpg" src="assets/case-2.mp4"></video>
+            <div class="noir_screen_overlay"></div>
+            <a class="noir_screen_pill" href="https://t.me/declineda/67" target="_blank" data-cursor="-exclusion -md">
+              <span>смотреть кейс</span>
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
 
-          <div class="case_visual_item" data-index="2" data-link="https://t.me/declineda/59">
-            <img src="assets/case-3.jpg" alt="Javier Leyenda" loading="lazy">
-            <div class="visual_gradient_overlay"></div>
-            <div class="visual_meta_top">
-              <span class="v_badge category">Google Ads / Performance</span>
-              <span class="v_badge metric">Реклама и лиды</span>
-            </div>
-            <div class="visual_center_play">
-              <div class="play_circle_glow">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
-            <div class="visual_meta_bottom">
-              <div class="v_project_title">Javier Leyenda</div>
-              <a class="v_watch_btn" href="https://t.me/declineda/59" target="_blank" data-cursor="-exclusion -md">
-                <span>смотреть кейс</span>
-                <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
+          <div class="noir_screen_item" data-index="2" data-link="https://t.me/declineda/59">
+            <video loop muted playsinline preload="metadata" poster="assets/case-3.jpg" src="assets/case-3.mp4"></video>
+            <div class="noir_screen_overlay"></div>
+            <a class="noir_screen_pill" href="https://t.me/declineda/59" target="_blank" data-cursor="-exclusion -md">
+              <span>смотреть кейс</span>
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
 
-          <div class="case_visual_item" data-index="3" data-link="https://t.me/declineda/59">
-            <img src="assets/case-4.jpg" alt="Armando" loading="lazy">
-            <div class="visual_gradient_overlay"></div>
-            <div class="visual_meta_top">
-              <span class="v_badge category">Google Ads / Performance</span>
-              <span class="v_badge metric">4 ролика под ключ</span>
-            </div>
-            <div class="visual_center_play">
-              <div class="play_circle_glow">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
-            <div class="visual_meta_bottom">
-              <div class="v_project_title">Armando</div>
-              <a class="v_watch_btn" href="https://t.me/declineda/59" target="_blank" data-cursor="-exclusion -md">
-                <span>смотреть кейс</span>
-                <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
+          <div class="noir_screen_item" data-index="3" data-link="https://t.me/declineda/59">
+            <video loop muted playsinline preload="metadata" poster="assets/case-4.jpg" src="assets/case-4.mp4"></video>
+            <div class="noir_screen_overlay"></div>
+            <a class="noir_screen_pill" href="https://t.me/declineda/59" target="_blank" data-cursor="-exclusion -md">
+              <span>смотреть кейс</span>
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
 
-          <div class="case_visual_item" data-index="4" data-link="https://youtu.be/FfmR6vr8Pzs">
-            <img src="assets/case-5.jpg" alt="matveyforgeon" loading="lazy">
-            <div class="visual_gradient_overlay"></div>
-            <div class="visual_meta_top">
-              <span class="v_badge category">YouTube Storytelling</span>
-              <span class="v_badge metric">Удержание зрителя · AI</span>
-            </div>
-            <div class="visual_center_play">
-              <div class="play_circle_glow">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
-            <div class="visual_meta_bottom">
-              <div class="v_project_title">matveyforgeon</div>
-              <a class="v_watch_btn" href="https://youtu.be/FfmR6vr8Pzs" target="_blank" data-cursor="-exclusion -md">
-                <span>смотреть кейс</span>
-                <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
+          <div class="noir_screen_item" data-index="4" data-link="https://youtu.be/FfmR6vr8Pzs">
+            <video loop muted playsinline preload="metadata" poster="assets/case-5.jpg" src="assets/case-5.mp4"></video>
+            <div class="noir_screen_overlay"></div>
+            <a class="noir_screen_pill" href="https://youtu.be/FfmR6vr8Pzs" target="_blank" data-cursor="-exclusion -md">
+              <span>смотреть кейс</span>
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
 
-          <div class="case_visual_item" data-index="5" data-link="https://t.me/declineda/72">
-            <img src="assets/case-6.jpg" alt="Rossi" loading="lazy">
-            <div class="visual_gradient_overlay"></div>
-            <div class="visual_meta_top">
-              <span class="v_badge category">App Promo / Motion</span>
-              <span class="v_badge metric">Промо в стиле Apple</span>
-            </div>
-            <div class="visual_center_play">
-              <div class="play_circle_glow">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
-            <div class="visual_meta_bottom">
-              <div class="v_project_title">Rossi · App Promo</div>
-              <a class="v_watch_btn" href="https://t.me/declineda/72" target="_blank" data-cursor="-exclusion -md">
-                <span>смотреть кейс</span>
-                <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
+          <div class="noir_screen_item" data-index="5" data-link="https://t.me/declineda/72">
+            <video loop muted playsinline preload="metadata" poster="assets/case-6.jpg" src="assets/case-6.mp4"></video>
+            <div class="noir_screen_overlay"></div>
+            <a class="noir_screen_pill" href="https://t.me/declineda/72" target="_blank" data-cursor="-exclusion -md">
+              <span>смотреть кейс</span>
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
 
-          <div class="case_visual_item" data-index="6" data-link="https://t.me/declineda/69">
-            <img src="assets/case-7.jpg" alt="Skills Better" loading="lazy">
-            <div class="visual_gradient_overlay"></div>
-            <div class="visual_meta_top">
-              <span class="v_badge category">Commercial Vertical</span>
-              <span class="v_badge metric">Динамичный вертикал</span>
-            </div>
-            <div class="visual_center_play">
-              <div class="play_circle_glow">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
-            <div class="visual_meta_bottom">
-              <div class="v_project_title">Skills Better</div>
-              <a class="v_watch_btn" href="https://t.me/declineda/69" target="_blank" data-cursor="-exclusion -md">
-                <span>смотреть кейс</span>
-                <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
+          <div class="noir_screen_item" data-index="6" data-link="https://t.me/declineda/69">
+            <video loop muted playsinline preload="metadata" poster="assets/case-7.jpg" src="assets/case-7.mp4"></video>
+            <div class="noir_screen_overlay"></div>
+            <a class="noir_screen_pill" href="https://t.me/declineda/69" target="_blank" data-cursor="-exclusion -md">
+              <span>смотреть кейс</span>
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
 
-          <div class="case_visual_item" data-index="7" data-link="https://www.instagram.com/josephswork/">
-            <img src="assets/case-8.jpg" alt="Joseph Editing" loading="lazy">
-            <div class="visual_gradient_overlay"></div>
-            <div class="visual_meta_top">
-              <span class="v_badge category">3D Reels / Tracking</span>
-              <span class="v_badge metric">38 400 просмотров</span>
-            </div>
-            <div class="visual_center_play">
-              <div class="play_circle_glow">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              </div>
-            </div>
-            <div class="visual_meta_bottom">
-              <div class="v_project_title">Joseph Editing</div>
-              <a class="v_watch_btn" href="https://www.instagram.com/josephswork/" target="_blank" data-cursor="-exclusion -md">
-                <span>смотреть кейс</span>
-                <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
+          <div class="noir_screen_item" data-index="7" data-link="https://www.instagram.com/josephswork/">
+            <video loop muted playsinline preload="metadata" poster="assets/case-8.jpg" src="assets/case-8.mp4"></video>
+            <div class="noir_screen_overlay"></div>
+            <a class="noir_screen_pill" href="https://www.instagram.com/josephswork/" target="_blank" data-cursor="-exclusion -md">
+              <span>смотреть кейс</span>
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
           </div>
         </div>
       </div>
 
-      <!-- Right Column: 3-Line Illuminated Drum Console (Photo 1) -->
-      <div class="cases_drum_console">
-        <!-- 3 Lines Reel Box -->
-        <div class="cases_drum_reel" id="casesDrumReel">
-          <!-- Line 1: Прошлая (тусклая, кликабельная) -->
-          <div class="drum_line is-prev" id="drumLinePrev" data-cursor="-exclusion -md">
-            <span class="drum_line_idx" id="drumPrevIdx">08</span>
-            <span class="drum_line_title" id="drumPrevTitle">шоурил 2026</span>
-            <span class="drum_line_sub" id="drumPrevSub">Showreel · звук</span>
-            <span class="drum_line_arrow">↑ прошлая</span>
-          </div>
-
-          <!-- Line 2: СЕЙЧАС (АКТИВНАЯ, ЯРКАЯ, БОЛЬШАЯ) -->
-          <div class="drum_line is-current" id="drumLineCurrent" data-cursor="-exclusion -md">
-            <div class="drum_current_top">
-              <div class="drum_status_badge">
-                <span class="drum_pulse_dot"></span>
-                <span class="drum_status_text">активный кейс</span>
-              </div>
-              <div class="drum_counter" id="drumCurrentCounter">01 / 08</div>
-            </div>
-            <div class="drum_current_title" id="drumCurrentTitle">што за тим</div>
-            <div class="drum_current_bottom">
-              <div class="drum_current_tags">
-                <span class="drum_pill" id="drumCurrentCategory">YouTube Storytelling</span>
-                <span class="drum_pill metric" id="drumCurrentMetric">330 000 просмотров</span>
-              </div>
-              <a class="drum_open_btn" id="drumCurrentLink" href="https://youtu.be/I3W5YqmL8E8" target="_blank" data-cursor="-exclusion -md">
-                <span>смотреть ролик</span>
-                <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Line 3: Следующая (тусклая, кликабельная) -->
-          <div class="drum_line is-next" id="drumLineNext" data-cursor="-exclusion -md">
-            <span class="drum_line_idx" id="drumNextIdx">02</span>
-            <span class="drum_line_title" id="drumNextTitle">Семён Гельфенбуйм</span>
-            <span class="drum_line_sub" id="drumNextSub">VSL / Запуск 1+ млн ₽</span>
-            <span class="drum_line_arrow">следующая ↓</span>
-          </div>
+      <!-- Right Column: Minimalist 2-3 Word Titles (Photo 2 & 3) -->
+      <div class="cases_noir_right" id="casesNoirList">
+        <div class="noir_case_row is-active" data-index="0" data-link="https://youtu.be/I3W5YqmL8E8" data-cursor="-exclusion -md">
+          <h3 class="noir_case_title">Што за тим</h3>
+          <span class="noir_case_dot"></span>
         </div>
-
-        <!-- Controls: Prev / Next Buttons + Progress -->
-        <div class="cases_nav_controls">
-          <div class="cases_btn_group">
-            <button class="cases_ctrl_btn" id="casesBtnPrev" type="button" aria-label="Предыдущий кейс" data-cursor="-exclusion -md">
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M10 13L5 8L10 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span>назад</span>
-            </button>
-            <button class="cases_ctrl_btn" id="casesBtnNext" type="button" aria-label="Следующий кейс" data-cursor="-exclusion -md">
-              <span>вперед</span>
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-          </div>
-          <div class="cases_progress_track">
-            <div class="cases_progress_bar" id="casesProgressBar" style="transform: scaleX(0.125)"></div>
-          </div>
+        <div class="noir_case_row" data-index="1" data-link="https://t.me/declineda/67" data-cursor="-exclusion -md">
+          <h3 class="noir_case_title">Семён Гельфенбуйм</h3>
+          <span class="noir_case_dot"></span>
+        </div>
+        <div class="noir_case_row" data-index="2" data-link="https://t.me/declineda/59" data-cursor="-exclusion -md">
+          <h3 class="noir_case_title">Javier Leyenda</h3>
+          <span class="noir_case_dot"></span>
+        </div>
+        <div class="noir_case_row" data-index="3" data-link="https://t.me/declineda/59" data-cursor="-exclusion -md">
+          <h3 class="noir_case_title">Armando Performance</h3>
+          <span class="noir_case_dot"></span>
+        </div>
+        <div class="noir_case_row" data-index="4" data-link="https://youtu.be/FfmR6vr8Pzs" data-cursor="-exclusion -md">
+          <h3 class="noir_case_title">Matvey Forgeon</h3>
+          <span class="noir_case_dot"></span>
+        </div>
+        <div class="noir_case_row" data-index="5" data-link="https://t.me/declineda/72" data-cursor="-exclusion -md">
+          <h3 class="noir_case_title">Rossi App Promo</h3>
+          <span class="noir_case_dot"></span>
+        </div>
+        <div class="noir_case_row" data-index="6" data-link="https://t.me/declineda/69" data-cursor="-exclusion -md">
+          <h3 class="noir_case_title">Skills Better</h3>
+          <span class="noir_case_dot"></span>
+        </div>
+        <div class="noir_case_row" data-index="7" data-link="https://www.instagram.com/josephswork/" data-cursor="-exclusion -md">
+          <h3 class="noir_case_title">Joseph Editing</h3>
+          <span class="noir_case_dot"></span>
         </div>
       </div>
     </div>
@@ -2266,16 +2144,15 @@ $(document).ready(function() {
   transform: translateY(2px);
 }
 
-/* ───────── CASES INTERACTIVE SECTION (NO SCROLL HIJACKING) ───────── */
-.cases_interactive_section {
+/* ───────── NOIR.IO CASES SECTION (1:1 EXACT PHOTO 2 & 3) ───────── */
+.cases_noir_section {
   position: relative;
   background: #000000;
   color: #ffffff;
-  padding: clamp(32px, 4.5vh, 52px) 0;
+  padding: clamp(36px, 5vh, 64px) 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  overflow: hidden;
 }
-.cases_top_header {
+.cases_noir_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2283,414 +2160,162 @@ $(document).ready(function() {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.45);
-  margin-bottom: clamp(18px, 2.8vh, 32px);
+  margin-bottom: clamp(24px, 3.5vh, 40px);
 }
-.cases_tag_title {
+.cases_noir_tag {
   display: flex;
   align-items: center;
   gap: 8px;
   color: #ffffff;
   font-weight: 500;
 }
-.live_dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #ffffff;
-  display: inline-block;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-}
-.count_sup {
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 10px;
-}
-.cases_hint_text {
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 12px;
-  text-transform: lowercase;
-}
-
-/* 2-Column Responsive Layout: Left Video Preview + Right 3-Line Reel */
-.cases_reel_layout {
+.cases_noir_layout {
   display: grid;
-  grid-template-columns: 1.18fr 1fr;
-  gap: clamp(24px, 4vw, 56px);
-  align-items: center;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: start;
+  position: relative;
 }
 
-/* Video Stage */
-.cases_visual_stage {
-  width: 100%;
+/* Left Column: Sticky Video Screen */
+.cases_noir_left {
+  position: sticky;
+  top: clamp(80px, 14vh, 120px);
+  z-index: 4;
 }
-.cases_screen_frame {
+.cases_noir_screen {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/10;
-  border-radius: 20px;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
   overflow: hidden;
-  background: #0c0c0c;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85);
+  background: #090909;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.85);
   cursor: pointer;
   user-select: none;
 }
-.case_visual_item {
+.noir_screen_item {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transform: scale(0.96);
+  transform: scale(1.03);
   pointer-events: none;
-  transition: opacity 0.45s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.28s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.case_visual_item.active {
+.noir_screen_item.is-active {
   opacity: 1;
   transform: scale(1);
   pointer-events: auto;
+  z-index: 2;
 }
-.case_visual_item img {
+.noir_screen_item video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: brightness(0.92) contrast(1.05);
 }
-.visual_gradient_overlay {
+.noir_screen_overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,0.85) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 50%, rgba(0,0,0,0.6) 100%);
   pointer-events: none;
 }
-.visual_meta_top {
+.noir_screen_pill {
   position: absolute;
-  top: 14px;
-  left: 14px;
+  bottom: 14px;
   right: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 2;
-}
-.v_badge {
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 999px;
-  padding: 5px 12px;
-  font-family: Inter, sans-serif;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.9);
-}
-.visual_center_play {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  z-index: 2;
-}
-.play_circle_glow {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(10px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-.cases_screen_frame:hover .play_circle_glow {
-  transform: scale(1.1);
-  background: rgba(255, 255, 255, 0.2);
-}
-.visual_meta_bottom {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  z-index: 2;
-}
-.v_project_title {
-  font-family: 'Instrument Serif', Georgia, serif;
-  font-size: clamp(22px, 2.6vw, 36px);
-  color: #ffffff;
-  line-height: 1.05;
-  text-transform: lowercase;
-  text-shadow: 0 2px 12px rgba(0,0,0,0.8);
-}
-.v_watch_btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: rgba(12, 12, 12, 0.75);
-  color: #ffffff;
-  text-decoration: none;
-  font-family: Inter, sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: all 0.25s ease;
-  white-space: nowrap;
-}
-.v_watch_btn:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.55);
-  color: #ffffff;
-  transform: translateY(-1px);
-}
-
-/* ───────── 3-LINE ILLUMINATED DRUM CONSOLE (PHOTO 1 REQUEST) ───────── */
-.cases_drum_console {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: clamp(14px, 2.2vh, 24px);
-}
-.cases_drum_reel {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* Drum Lines Base */
-.drum_line {
-  border-radius: 14px;
-  cursor: pointer;
-  user-select: none;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Line 1 (Prev) & Line 3 (Next): Dimmed preview lines */
-.drum_line.is-prev,
-.drum_line.is-next {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 16px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  opacity: 0.38;
-}
-.drum_line.is-prev:hover,
-.drum_line.is-next:hover {
-  opacity: 0.85;
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.18);
-  transform: translateX(4px);
-}
-.drum_line_idx {
-  font-family: Inter, sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.6);
-  min-width: 28px;
-}
-.drum_line_title {
-  font-family: 'Instrument Serif', Georgia, serif;
-  font-size: clamp(18px, 1.8vw, 22px);
-  color: #ffffff;
-  text-transform: lowercase;
-  flex: 1;
-  padding: 0 10px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.drum_line_sub {
-  font-family: Inter, sans-serif;
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.4);
-  text-transform: lowercase;
-  margin-right: 12px;
-}
-.drum_line_arrow {
-  font-size: 11px;
-  letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.35);
-  font-family: Inter, sans-serif;
-  white-space: nowrap;
-}
-
-/* Line 2 (Current): BRIGHT, MASSIVE, ILLUMINATED */
-.drum_line.is-current {
-  padding: clamp(16px, 2.4vh, 24px) clamp(18px, 2.2vw, 26px);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  opacity: 1;
-}
-.drum_current_top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-}
-.drum_status_badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: Inter, sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.7);
-}
-.drum_pulse_dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #ffffff;
-  box-shadow: 0 0 10px #ffffff;
-  animation: pulseDot 2s infinite ease-in-out;
-}
-@keyframes pulseDot {
-  0%, 100% { opacity: 0.5; transform: scale(0.9); }
-  50% { opacity: 1; transform: scale(1.3); }
-}
-.drum_counter {
-  font-family: Inter, sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.5);
-}
-.drum_current_title {
-  font-family: 'Instrument Serif', Georgia, serif;
-  font-size: clamp(30px, 4vw, 48px);
-  line-height: 1.05;
-  color: #ffffff;
-  text-transform: lowercase;
-  margin: 4px 0 12px;
-  text-shadow: 0 0 35px rgba(255, 255, 255, 0.4);
-}
-.drum_current_bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding-top: 12px;
-}
-.drum_current_tags {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-.drum_pill {
-  font-family: Inter, sans-serif;
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.75);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(10, 10, 10, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 999px;
-  padding: 4px 10px;
-  text-transform: lowercase;
-}
-.drum_pill.metric {
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.22);
-}
-.drum_open_btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: Inter, sans-serif;
-  font-size: 11px;
-  font-weight: 500;
-  color: #ffffff;
-  text-decoration: none;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.22);
   padding: 6px 14px;
-  border-radius: 999px;
-  transition: all 0.25s ease;
+  font-family: Inter, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  text-transform: lowercase;
+  transition: all 0.2s ease;
+  z-index: 3;
 }
-.drum_open_btn:hover {
-  background: rgba(255, 255, 255, 0.2);
+.noir_screen_pill:hover {
+  background: rgba(255, 255, 255, 0.18);
   border-color: rgba(255, 255, 255, 0.5);
   color: #ffffff;
   transform: translateY(-1px);
 }
 
-/* Nav Controls */
-.cases_nav_controls {
+/* Right Column: Minimalist List */
+.cases_noir_right {
   display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 2.2vh, 22px);
+  padding: 4px 0 clamp(40px, 8vh, 80px);
+}
+.noir_case_row {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  padding: 4px 2px;
-}
-.cases_btn_group {
-  display: flex;
-  gap: 8px;
-}
-.cases_ctrl_btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 999px;
-  padding: 8px 16px;
-  color: #ffffff;
-  font-family: Inter, sans-serif;
-  font-size: 11px;
-  font-weight: 500;
   cursor: pointer;
-  transition: all 0.25s ease;
+  user-select: none;
+  color: rgba(255, 255, 255, 0.26);
+  padding: 6px 0;
+  transition: color 0.16s ease, transform 0.2s ease;
 }
-.cases_ctrl_btn:hover {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.45);
-  transform: translateY(-1px);
+.noir_case_row:hover,
+.noir_case_row.is-active {
+  color: #ffffff;
 }
-.cases_progress_track {
-  width: 140px;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 2px;
-  overflow: hidden;
+.noir_case_title {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: clamp(28px, 3.8vw, 54px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin: 0;
+  transition: color 0.16s ease;
 }
-.cases_progress_bar {
-  height: 100%;
-  width: 100%;
+.noir_case_dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
   background: #ffffff;
-  transform-origin: left;
-  transform: scaleX(0.125);
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  flex-shrink: 0;
+}
+.noir_case_row.is-active .noir_case_dot {
+  opacity: 1;
+  transform: scale(1);
 }
 
-/* Mobile Layout for Cases */
+/* Mobile Responsive (Photo 3) */
 @media (max-width: 991px) {
-  .cases_reel_layout {
+  .cases_noir_layout {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 24px;
   }
-  .drum_line_sub {
-    display: none;
+  .cases_noir_left {
+    position: sticky;
+    top: 54px;
+    z-index: 10;
+    padding-bottom: 8px;
+    background: #000000;
   }
-  .drum_line_title {
-    font-size: 16px;
+  .noir_case_title {
+    font-size: clamp(26px, 7vw, 38px);
   }
-  .drum_current_title {
-    font-size: 28px;
-  }
-  .cases_hint_text {
-    display: none;
+  .noir_case_row {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
   }
 }
 
@@ -3056,199 +2681,103 @@ $(document).ready(function() {
     });
   }
 
-  // 3. Cases Interactive 3-Line Drum Reel (No Scroll Hijacking!)
-  function initCasesDrumReel() {
+  // 3. Noir.io Capabilities / Cases Showcase (Hover to Play + Minimalist Titles)
+  function initNoirCases() {
     const sec = document.getElementById('cases');
     if (!sec) return;
 
-    const casesData = [
-      {
-        idx: 0,
-        num: "01",
-        title: "што за тим",
-        category: "YouTube Storytelling",
-        metric: "330 000 просмотров",
-        sub: "YouTube Storytelling",
-        link: "https://youtu.be/I3W5YqmL8E8"
-      },
-      {
-        idx: 1,
-        num: "02",
-        title: "Семён Гельфенбуйм",
-        category: "VSL / Продающее видео",
-        metric: "Запуск на 1 000 000+ ₽",
-        sub: "VSL / Запуск 1+ млн ₽",
-        link: "https://t.me/declineda/67"
-      },
-      {
-        idx: 2,
-        num: "03",
-        title: "Javier Leyenda",
-        category: "Google Ads / Performance",
-        metric: "Реклама и лиды",
-        sub: "Google Ads / Реклама",
-        link: "https://t.me/declineda/59"
-      },
-      {
-        idx: 3,
-        num: "04",
-        title: "Armando",
-        category: "Google Ads / Performance",
-        metric: "4 ролика под ключ",
-        sub: "4 ролика под ключ",
-        link: "https://t.me/declineda/59"
-      },
-      {
-        idx: 4,
-        num: "05",
-        title: "matveyforgeon",
-        category: "YouTube Storytelling",
-        metric: "Удержание зрителя · AI",
-        sub: "YouTube / AI Удержание",
-        link: "https://youtu.be/FfmR6vr8Pzs"
-      },
-      {
-        idx: 5,
-        num: "06",
-        title: "Rossi · App Promo",
-        category: "App Promo / Motion",
-        metric: "Промо в стиле Apple",
-        sub: "App Promo / Apple Style",
-        link: "https://t.me/declineda/72"
-      },
-      {
-        idx: 6,
-        num: "07",
-        title: "Skills Better",
-        category: "Commercial Vertical",
-        metric: "Динамичный вертикал",
-        sub: "Reels / Динамичный",
-        link: "https://t.me/declineda/69"
-      },
-      {
-        idx: 7,
-        num: "08",
-        title: "Joseph Editing",
-        category: "3D Reels / Tracking",
-        metric: "38 400 просмотров",
-        sub: "3D Reels / Трекинг",
-        link: "https://www.instagram.com/josephswork/"
-      }
-    ];
+    const rows = document.querySelectorAll('.noir_case_row');
+    const screenItems = document.querySelectorAll('.noir_screen_item');
+    const screen = document.getElementById('casesNoirScreen');
+    if (!rows.length || !screenItems.length) return;
 
-    const total = casesData.length;
     let activeIdx = 0;
 
-    const visualItems = document.querySelectorAll('.case_visual_item');
-    const pBar = document.getElementById('casesProgressBar');
+    function activateCase(idx, playVideo = true) {
+      if (idx < 0 || idx >= rows.length) return;
+      activeIdx = idx;
 
-    const prevIdxEl = document.getElementById('drumPrevIdx');
-    const prevTitleEl = document.getElementById('drumPrevTitle');
-    const prevSubEl = document.getElementById('drumPrevSub');
-
-    const currCounterEl = document.getElementById('drumCurrentCounter');
-    const currTitleEl = document.getElementById('drumCurrentTitle');
-    const currCatEl = document.getElementById('drumCurrentCategory');
-    const currMetricEl = document.getElementById('drumCurrentMetric');
-    const currLinkEl = document.getElementById('drumCurrentLink');
-
-    const nextIdxEl = document.getElementById('drumNextIdx');
-    const nextTitleEl = document.getElementById('drumNextTitle');
-    const nextSubEl = document.getElementById('drumNextSub');
-
-    function updateUI(idx) {
-      activeIdx = (idx + total) % total;
-      const prevIndex = (activeIdx - 1 + total) % total;
-      const nextIndex = (activeIdx + 1) % total;
-
-      const curr = casesData[activeIdx];
-      const prev = casesData[prevIndex];
-      const next = casesData[nextIndex];
-
-      // Crossfade visual items
-      visualItems.forEach((v, i) => {
-        v.classList.toggle('active', i === activeIdx);
+      // Update rows
+      rows.forEach((r, i) => {
+        r.classList.toggle('is-active', i === idx);
       });
 
-      // Update Line 1 (Prev)
-      if (prevIdxEl) prevIdxEl.textContent = prev.num;
-      if (prevTitleEl) prevTitleEl.textContent = prev.title;
-      if (prevSubEl) prevSubEl.textContent = prev.sub;
-
-      // Update Line 2 (Current)
-      if (currCounterEl) currCounterEl.textContent = `${curr.num} / ${String(total).padStart(2, '0')}`;
-      if (currTitleEl) currTitleEl.textContent = curr.title;
-      if (currCatEl) currCatEl.textContent = curr.category;
-      if (currMetricEl) currMetricEl.textContent = curr.metric;
-      if (currLinkEl) currLinkEl.href = curr.link;
-
-      // Update Line 3 (Next)
-      if (nextIdxEl) nextIdxEl.textContent = next.num;
-      if (nextTitleEl) nextTitleEl.textContent = next.title;
-      if (nextSubEl) nextSubEl.textContent = next.sub;
-
-      // Update progress bar
-      if (pBar) {
-        pBar.style.transform = `scaleX(${(activeIdx + 1) / total})`;
-      }
-    }
-
-    // Prev / Next button clicks
-    const btnPrev = document.getElementById('casesBtnPrev');
-    const btnNext = document.getElementById('casesBtnNext');
-    if (btnPrev) btnPrev.addEventListener('click', () => updateUI(activeIdx - 1));
-    if (btnNext) btnNext.addEventListener('click', () => updateUI(activeIdx + 1));
-
-    // Clicking lines directly
-    const linePrev = document.getElementById('drumLinePrev');
-    const lineNext = document.getElementById('drumLineNext');
-    if (linePrev) linePrev.addEventListener('click', () => updateUI(activeIdx - 1));
-    if (lineNext) lineNext.addEventListener('click', () => updateUI(activeIdx + 1));
-
-    // Screen frame click opens active project
-    const frame = document.getElementById('casesScreenFrame');
-    if (frame) {
-      frame.addEventListener('click', (e) => {
-        if (e.target.closest('.v_watch_btn')) return;
-        const curr = casesData[activeIdx];
-        if (curr && curr.link) window.open(curr.link, '_blank');
-      });
-    }
-
-    // Touch swipe gestures on mobile
-    let touchStartX = 0;
-    let touchStartY = 0;
-    const swipeTarget = document.querySelector('.cases_reel_layout');
-    if (swipeTarget) {
-      swipeTarget.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-        touchStartY = e.touches[0].clientY;
-      }, { passive: true });
-
-      swipeTarget.addEventListener('touchend', (e) => {
-        const dx = e.changedTouches[0].clientX - touchStartX;
-        const dy = e.changedTouches[0].clientY - touchStartY;
-        if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
-          if (dx < 0) updateUI(activeIdx + 1);
-          else updateUI(activeIdx - 1);
+      // Update videos
+      screenItems.forEach((si, i) => {
+        const isTarget = i === idx;
+        si.classList.toggle('is-active', isTarget);
+        const vid = si.querySelector('video');
+        if (vid) {
+          if (isTarget && playVideo) {
+            vid.currentTime = 0;
+            const p = vid.play();
+            if (p) p.catch(() => {});
+          } else {
+            vid.pause();
+          }
         }
-      }, { passive: true });
+      });
     }
 
-    // Initialize state
-    updateUI(0);
+    // Hover & Click on Rows
+    rows.forEach((row, i) => {
+      row.addEventListener('mouseenter', () => {
+        activateCase(i, true);
+      });
+
+      row.addEventListener('click', (e) => {
+        activateCase(i, true);
+        const link = row.getAttribute('data-link');
+        if (link) window.open(link, '_blank');
+      });
+    });
+
+    // Clicking Screen opens active case
+    if (screen) {
+      screen.addEventListener('click', (e) => {
+        if (e.target.closest('.noir_screen_pill')) return;
+        const currentActive = rows[activeIdx];
+        if (currentActive) {
+          const link = currentActive.getAttribute('data-link');
+          if (link) window.open(link, '_blank');
+        }
+      });
+    }
+
+    // Natural scroll tracking (highlights row in center viewport)
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const idx = parseInt(entry.target.getAttribute('data-index'), 10);
+            if (!isNaN(idx)) {
+              activateCase(idx, true);
+            }
+          }
+        });
+      }, {
+        root: null,
+        rootMargin: '-35% 0px -35% 0px',
+        threshold: 0.1
+      });
+
+      rows.forEach(r => observer.observe(r));
+    }
+
+    // Initial activation
+    activateCase(0, true);
   }
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
       initCursor();
       initScrollReveal();
-      initCasesDrumReel();
+      initNoirCases();
     });
   } else {
     initCursor();
     initScrollReveal();
-    initCasesDrumReel();
+    initNoirCases();
   }
 })();
 </script>
