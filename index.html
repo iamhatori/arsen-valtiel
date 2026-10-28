@@ -230,72 +230,6 @@ html, body {
 </style>
 
 <style id="custom-cursor-and-scroll-css">
-/* Mouse Follower Styling */
-.mf-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999999 !important;
-  direction: ltr;
-  contain: layout style size;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.15s ease-out;
-}
-
-.mf-cursor:before {
-  content: "";
-  position: absolute;
-  top: -12px;
-  left: -12px;
-  display: block;
-  width: 24px;
-  height: 24px;
-  transform: scale(0.45);
-  background: #ffffff;
-  border-radius: 50%;
-  transition: transform 0.22s ease-out, background 0.22s ease-out;
-}
-
-.mf-cursor.-exclusion {
-  mix-blend-mode: difference !important;
-}
-.mf-cursor.-exclusion:before {
-  background: #ffffff !important;
-}
-
-.mf-cursor.-md:before {
-  transform: scale(1.6);
-}
-
-.mf-cursor.-lg:before {
-  transform: scale(3.8);
-  background: #ffffff !important;
-}
-
-.mf-cursor-text {
-  position: absolute;
-  top: -18px;
-  left: -32px;
-  width: 64px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Inter, system-ui, sans-serif;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #000000 !important;
-  opacity: 0;
-  transition: opacity 0.15s ease;
-  pointer-events: none;
-}
-
-.mf-cursor.-text .mf-cursor-text {
-  opacity: 1 !important;
-}
-
 /* Fix sticky scroll container */
 html, body {
   overflow-x: clip !important;
@@ -304,6 +238,36 @@ html, body {
 }
 .page_wrap {
   overflow: visible !important;
+}
+
+/* ───────── CURSOR POLISH ───────── */
+.mf-cursor {
+  z-index: 9999999 !important;
+  pointer-events: none !important;
+}
+.mf-cursor:before {
+  background: #ffffff !important;
+}
+.mf-cursor.-exclusion {
+  mix-blend-mode: exclusion !important;
+}
+.mf-cursor.-exclusion:before {
+  background: #ffffff !important;
+}
+.mf-cursor.-md:before {
+  transform: scale(1.3) !important;
+}
+.mf-cursor.-lg:before {
+  transform: scale(2.2) !important;
+  background: #ffffff !important;
+}
+.mf-cursor-text {
+  color: #050505 !important;
+  font-family: Inter, system-ui, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
 }
 </style>
 
@@ -673,24 +637,6 @@ section, header, footer {
   color: black; 
 }
 
-.mf-cursor-text {
-  color: var(--theme--background);
-}
-
-.mf-cursor.-md:before {
-  transform: scale(1.25);
-}
-
-.mf-cursor.-lg:before {
-  transform: scale(2);
-}
-
-.mf-cursor.-lg > .mf-cursor-inner > .mf-cursor-text {
-	top: -40px;
-  left: -40px;
-  width: 80px;
-  height: 80px;
-}
 
 .nav_news_wrap, .work_nav_contain, .studio_image_scroll_wrap {
     -ms-overflow-style: none;  /* IE 10+ */
@@ -914,34 +860,34 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
   counter-increment: gridguides;
   content: counter(gridguides);
 }
-</style></div><div class="styleguide_guide_contain u-container" data-padding-bottom="none" data-padding-top="none"><div class="styleguide_guide_layout u-grid-custom"><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div></div></div></div><nav class="nav_wrap" data-theme="inherit" style="backdrop-filter:blur(12px);background:rgba(0,0,0,0.75);border-bottom:1px solid rgba(255,255,255,0.08)">
+</style></div><div class="styleguide_guide_contain u-container" data-padding-bottom="none" data-padding-top="none"><div class="styleguide_guide_layout u-grid-custom"><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div><div class="styleguide_guide_column u-vflex-center-bottom"></div></div></div></div><nav class="nav_wrap" data-theme="inherit" style="background:rgba(10,10,10,0.96);border-bottom:1px solid rgba(255,255,255,0.08)">
 <div class="nav_contain u-container" style="display:flex;align-items:center;justify-content:space-between;padding:14px 20px">
 <!-- Logo -->
 <div class="nav_logo_wrap">
-<a aria-current="page" class="nav_logo_link w-inline-block w--current" data-cursor="-exclusion -md" href="/" style="display:flex;align-items:center;justify-content:center;background:#141414;border:1px solid rgba(255,255,255,0.25);border-radius:50%;width:36px;height:36px;overflow:hidden;text-decoration:none">
+<a aria-current="page" class="nav_logo_link w-inline-block w--current" href="/" style="display:flex;align-items:center;justify-content:center;background:#141414;border:1px solid rgba(255,255,255,0.25);border-radius:50%;width:36px;height:36px;overflow:hidden;text-decoration:none">
         <img src="assets/logo.jpg" alt="Arsen Valtiel" style="width:100%;height:100%;object-fit:cover;display:block">
       </a>
 </div>
 <!-- Desktop Menu Links -->
 <div class="nav_menu_wrap" style="display:flex;align-items:center">
 <div class="nav_menu_links" style="display:flex;gap:24px;align-items:center">
-<a class="nav_menu_link" data-cursor="-exclusion -md" href="#cases" style="text-decoration:none;font-size:13px;color:rgba(255,255,255,0.75);transition:color 0.2s">работы</a>
-<a class="nav_menu_link" data-cursor="-exclusion -md" href="#concepts" style="text-decoration:none;font-size:13px;color:rgba(255,255,255,0.75);transition:color 0.2s">концепты</a>
-<a class="nav_menu_link" data-cursor="-exclusion -md" href="#about" style="text-decoration:none;font-size:13px;color:rgba(255,255,255,0.75);transition:color 0.2s">обо мне</a>
-<a class="nav_menu_link" data-cursor="-exclusion -md" href="#services" style="text-decoration:none;font-size:13px;color:rgba(255,255,255,0.75);transition:color 0.2s">услуги</a>
-<a class="nav_menu_link" data-cursor="-exclusion -md" href="#process" style="text-decoration:none;font-size:13px;color:rgba(255,255,255,0.75);transition:color 0.2s">процесс</a>
+<a class="nav_menu_link" href="#cases" style="text-decoration:none;font-size:13px;color:rgba(255,255,255,0.75);transition:color 0.2s">работы</a>
+<a class="nav_menu_link" href="#concepts" style="text-decoration:none;font-size:13px;color:rgba(255,255,255,0.75);transition:color 0.2s">концепты</a>
+<a class="nav_menu_link" href="#about" style="text-decoration:none;font-size:13px;color:rgba(255,255,255,0.75);transition:color 0.2s">обо мне</a>
+<a class="nav_menu_link" href="#services" style="text-decoration:none;font-size:13px;color:rgba(255,255,255,0.75);transition:color 0.2s">услуги</a>
+<a class="nav_menu_link" href="#process" style="text-decoration:none;font-size:13px;color:rgba(255,255,255,0.75);transition:color 0.2s">процесс</a>
 </div>
 </div>
 <!-- CTA Button -->
 <div class="nav_buttons_wrap" style="display:flex;align-items:center;gap:12px">
-<a class="btn_noir_nav" data-cursor="-exclusion -md" href="https://t.me/ArsenValtiel" target="_blank">
+<a class="btn_noir_nav" href="https://t.me/ArsenValtiel" target="_blank" rel="noopener noreferrer">
         <span>обсудить проект</span>
         <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
 </div>
 <!-- Mobile Menu Button -->
 <div class="nav_mobile_wrap" style="display:none">
-<a class="nav_mobile_menu w-inline-block" data-cursor="-exclusion -md" href="#cases" style="color:#fff;text-decoration:none;font-size:12px;border:1px solid rgba(255,255,255,0.2);padding:6px 12px;border-radius:999px">
+<a class="nav_mobile_menu w-inline-block" href="#cases" style="color:#fff;text-decoration:none;font-size:12px;border:1px solid rgba(255,255,255,0.2);padding:6px 12px;border-radius:999px">
         кейсы
       </a>
 </div>
@@ -970,7 +916,7 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
         </p>
 </div>
 <div class="home_hero_alt_cta" style="display:flex;gap:14px;margin-top:clamp(22px,3vh,34px);flex-wrap:wrap;align-items:center;justify-content:center">
-<a class="btn_noir_primary" data-cursor="-exclusion -md" href="https://t.me/ArsenValtiel" target="_blank">
+<a class="btn_noir_primary" href="https://t.me/ArsenValtiel" target="_blank" rel="noopener noreferrer">
           <span>обсудить проект</span>
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -1048,7 +994,7 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
             <video loop muted playsinline preload="auto" data-duration="54.633" poster="assets/case-4.jpg" src="assets/case-4-preview.mp4" data-full-src="assets/case-4.mp4" aria-label="Armando — Google Ads"></video>
           </div>
           <div class="noir_screen_item" data-index="4" aria-hidden="true">
-            <video loop muted playsinline preload="auto" data-duration="60.018" poster="assets/case-5.jpg" src="assets/case-5-preview.mp4" data-full-src="assets/case-5.mp4" aria-label="Matvey Forgeon — YouTube AI"></video>
+            <video loop muted playsinline preload="auto" data-duration="60.018" poster="assets/case-5.jpg" src="assets/case-5-preview.mp4" data-full-src="assets/case-5.mp4" aria-label="Matvey Forgeon — YouTube"></video>
           </div>
           <div class="noir_screen_item" data-index="5" aria-hidden="true">
             <video loop muted playsinline preload="auto" data-duration="40.32" poster="assets/case-6.jpg" src="assets/case-6-preview.mp4" data-full-src="assets/case-6.mp4" aria-label="Rossi — промо приложения"></video>
@@ -1059,13 +1005,6 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
           <div class="noir_screen_item" data-index="7" aria-hidden="true">
             <video loop muted playsinline preload="auto" data-duration="16" poster="assets/case-8.jpg" src="assets/case-8-preview.mp4" data-full-src="assets/case-8.mp4" aria-label="Joseph Editing — вертикальный 3D Reels"></video>
           </div>
-          
-          <div class="media_controls">
-            <button class="media_button" type="button" data-video-toggle aria-label="Воспроизвести видео" aria-pressed="false"><span data-play-icon aria-hidden="true">▷</span></button>
-            <button class="media_button" type="button" data-video-mute aria-label="Включить звук видео" aria-pressed="false"><span data-mute-icon aria-hidden="true">↗</span></button>
-            <span class="media_time" data-video-time>00:00 / 01:00</span>
-          </div>
-          <p class="media_message" data-media-message aria-live="polite" hidden></p>
         </div>
         <div class="cases_preview_footer">
           <span class="cases_preview_client" id="casesPreviewClient">Што за тим</span>
@@ -1078,11 +1017,9 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
         <article class="noir_case_row is-active" data-index="0" data-format="YOUTUBE · 16:9">
           <div class="case_mobile_media portfolio_media" id="caseMobile1">
             <video loop muted playsinline preload="auto" data-duration="60" poster="assets/case-1.jpg" src="assets/case-1-preview.mp4" data-full-src="assets/case-1.mp4" aria-label="Што за тим — фрагмент монтажа"></video>
-            <div class="media_controls"><button class="media_button" type="button" data-video-toggle aria-label="Воспроизвести видео" aria-pressed="false"><span data-play-icon aria-hidden="true">▷</span></button><button class="media_button" type="button" data-video-mute aria-label="Включить звук видео" aria-pressed="false"></button><span class="media_time" data-video-time>00:00 / 01:00</span></div>
-            <p class="media_message" data-media-message aria-live="polite" hidden></p>
           </div>
           <div class="case_copy">
-            <h3 class="case_heading"><button class="case_select" type="button" aria-controls="casesNoirScreen" aria-pressed="true" aria-describedby="caseTask1 caseResult1" data-cursor="-exclusion -md"><span class="case_index">01 ·</span><span class="noir_case_title">Што за тим</span><span class="case_format">YOUTUBE</span><span class="case_arrow" aria-hidden="true">↗</span></button></h3>
+            <h3 class="case_heading"><button class="case_select" type="button" aria-controls="casesNoirScreen" aria-pressed="true" aria-describedby="caseTask1 caseResult1"><span class="case_index">01 ·</span><span class="noir_case_title">Што за тим</span><span class="case_format">YOUTUBE</span><span class="case_arrow" aria-hidden="true">↗</span></button></h3>
             <p class="case_description" id="caseTask1">моушен-фрагменты для ролика на канале</p>
             <p class="case_result" id="caseResult1"><strong>итог: 330 000 просмотров</strong></p>
           </div>
@@ -1090,11 +1027,9 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
         <article class="noir_case_row" data-index="1" data-format="VSL · 16:9">
           <div class="case_mobile_media portfolio_media" id="caseMobile2">
             <video loop muted playsinline preload="auto" data-duration="518.98" poster="assets/case-2.jpg" src="assets/case-2-preview.mp4" data-full-src="assets/case-2.mp4" aria-label="Семён Гельфенбуйм — VSL"></video>
-            <div class="media_controls"><button class="media_button" type="button" data-video-toggle aria-label="Воспроизвести видео" aria-pressed="false"><span data-play-icon aria-hidden="true">▷</span></button><button class="media_button" type="button" data-video-mute aria-label="Включить звук видео" aria-pressed="false"></button><span class="media_time" data-video-time>00:00 / 08:39</span></div>
-            <p class="media_message" data-media-message aria-live="polite" hidden></p>
           </div>
           <div class="case_copy">
-            <h3 class="case_heading"><button class="case_select" type="button" aria-controls="casesNoirScreen" aria-pressed="false" aria-describedby="caseTask2 caseResult2" data-cursor="-exclusion -md"><span class="case_index">02 ·</span><span class="noir_case_title">Семён Гельфенбуйм</span><span class="case_format">VSL</span><span class="case_arrow" aria-hidden="true">↗</span></button></h3>
+            <h3 class="case_heading"><button class="case_select" type="button" aria-controls="casesNoirScreen" aria-pressed="false" aria-describedby="caseTask2 caseResult2"><span class="case_index">02 ·</span><span class="noir_case_title">Семён Гельфенбуйм</span><span class="case_format">VSL</span><span class="case_arrow" aria-hidden="true">↗</span></button></h3>
             <p class="case_description" id="caseTask2">продающее видео для запуска. собрал так, чтобы досматривали до оффера</p>
             <p class="case_result" id="caseResult2"><strong>итог: запуск на 1+ млн</strong></p>
           </div>
@@ -1102,11 +1037,9 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
         <article class="noir_case_row" data-index="2" data-format="GOOGLE ADS · 16:9">
           <div class="case_mobile_media portfolio_media" id="caseMobile3">
             <video loop muted playsinline preload="auto" data-duration="68.07" poster="assets/case-3.jpg" src="assets/case-3-preview.mp4" data-full-src="assets/case-3.mp4" aria-label="Javier Leyenda — Google Ads"></video>
-            <div class="media_controls"><button class="media_button" type="button" data-video-toggle aria-label="Воспроизвести видео" aria-pressed="false"><span data-play-icon aria-hidden="true">▷</span></button><button class="media_button" type="button" data-video-mute aria-label="Включить звук видео" aria-pressed="false"></button><span class="media_time" data-video-time>00:00 / 01:08</span></div>
-            <p class="media_message" data-media-message aria-live="polite" hidden></p>
           </div>
           <div class="case_copy">
-            <h3 class="case_heading"><button class="case_select" type="button" aria-controls="casesNoirScreen" aria-pressed="false" aria-describedby="caseTask3 caseResult3" data-cursor="-exclusion -md"><span class="case_index">03 ·</span><span class="noir_case_title">Javier Leyenda</span><span class="case_format">GOOGLE ADS</span><span class="case_arrow" aria-hidden="true">↗</span></button></h3>
+            <h3 class="case_heading"><button class="case_select" type="button" aria-controls="casesNoirScreen" aria-pressed="false" aria-describedby="caseTask3 caseResult3"><span class="case_index">03 ·</span><span class="noir_case_title">Javier Leyenda</span><span class="case_format">GOOGLE ADS</span><span class="case_arrow" aria-hidden="true">↗</span></button></h3>
             <p class="case_description" id="caseTask3">пакет динамичных роликов, которые не хочется скипнуть на пятой секунде</p>
             <p class="case_result" id="caseResult3"><strong>итог: заявки с рекламы</strong></p>
           </div>
@@ -1114,35 +1047,29 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
         <article class="noir_case_row" data-index="3" data-format="GOOGLE ADS · 16:9">
           <div class="case_mobile_media portfolio_media" id="caseMobile4">
             <video loop muted playsinline preload="auto" data-duration="54.633" poster="assets/case-4.jpg" src="assets/case-4-preview.mp4" data-full-src="assets/case-4.mp4" aria-label="Armando — Google Ads"></video>
-            <div class="media_controls"><button class="media_button" type="button" data-video-toggle aria-label="Воспроизвести видео" aria-pressed="false"><span data-play-icon aria-hidden="true">▷</span></button><button class="media_button" type="button" data-video-mute aria-label="Включить звук видео" aria-pressed="false"></button><span class="media_time" data-video-time>00:00 / 00:54</span></div>
-            <p class="media_message" data-media-message aria-live="polite" hidden></p>
           </div>
           <div class="case_copy">
-            <h3 class="case_heading"><button class="case_select" type="button" aria-controls="casesNoirScreen" aria-pressed="false" aria-describedby="caseTask4 caseResult4" data-cursor="-exclusion -md"><span class="case_index">04 ·</span><span class="noir_case_title">Armando</span><span class="case_format">GOOGLE ADS</span><span class="case_arrow" aria-hidden="true">↗</span></button></h3>
+            <h3 class="case_heading"><button class="case_select" type="button" aria-controls="casesNoirScreen" aria-pressed="false" aria-describedby="caseTask4 caseResult4"><span class="case_index">04 ·</span><span class="noir_case_title">Armando</span><span class="case_format">GOOGLE ADS</span><span class="case_arrow" aria-hidden="true">↗</span></button></h3>
             <p class="case_description" id="caseTask4">4 ролика под запуск. пришел ко мне после роликов Хавьера</p>
             <p class="case_result" id="caseResult4"><strong>итог: заявки и успешный запуск</strong></p>
           </div>
         </article>
-        <article class="noir_case_row" data-index="4" data-format="YOUTUBE / AI · 16:9">
+        <article class="noir_case_row" data-index="4" data-format="YOUTUBE · 16:9">
           <div class="case_mobile_media portfolio_media" id="caseMobile5">
-            <video loop muted playsinline preload="auto" data-duration="60.018" poster="assets/case-5.jpg" src="assets/case-5-preview.mp4" data-full-src="assets/case-5.mp4" aria-label="Matvey Forgeon — YouTube AI"></video>
-            <div class="media_controls"><button class="media_button" type="button" data-video-toggle aria-label="Воспроизвести видео" aria-pressed="false"><span data-play-icon aria-hidden="true">▷</span></button><button class="media_button" type="button" data-video-mute aria-label="Включить звук видео" aria-pressed="false"></button><span class="media_time" data-video-time>00:00 / 01:00</span></div>
-            <p class="media_message" data-media-message aria-live="polite" hidden></p>
+            <video loop muted playsinline preload="auto" data-duration="60.018" poster="assets/case-5.jpg" src="assets/case-5-preview.mp4" data-full-src="assets/case-5.mp4" aria-label="Matvey Forgeon — YouTube"></video>
           </div>
           <div class="case_copy">
-            <h3 class="case_heading"><button class="case_select" type="button" aria-controls="casesNoirScreen" aria-pressed="false" aria-describedby="caseTask5 caseResult5" data-cursor="-exclusion -md"><span class="case_index">05 ·</span><span class="noir_case_title">Matvey Forgeon</span><span class="case_format">YOUTUBE / AI</span><span class="case_arrow" aria-hidden="true">↗</span></button></h3>
-            <p class="case_description" id="caseTask5">горизонтальный ролик про AI: история, которую смотрят до конца</p>
+            <h3 class="case_heading"><button class="case_select" type="button" aria-controls="casesNoirScreen" aria-pressed="false" aria-describedby="caseTask5 caseResult5"><span class="case_index">05 ·</span><span class="noir_case_title">Matvey Forgeon</span><span class="case_format">YOUTUBE</span><span class="case_arrow" aria-hidden="true">↗</span></button></h3>
+            <p class="case_description" id="caseTask5">горизонтальный ролик: история, которую смотрят до конца</p>
             <p class="case_result" id="caseResult5"><strong>итог: целевые лиды и просмотры</strong></p>
           </div>
         </article>
         <article class="noir_case_row" data-index="5" data-format="APP PROMO · 16:9">
           <div class="case_mobile_media portfolio_media" id="caseMobile6">
             <video loop muted playsinline preload="auto" data-duration="40.32" poster="assets/case-6.jpg" src="assets/case-6-preview.mp4" data-full-src="assets/case-6.mp4" aria-label="Rossi — промо приложения"></video>
-            <div class="media_controls"><button class="media_button" type="button" data-video-toggle aria-label="Воспроизвести видео" aria-pressed="false"><span data-play-icon aria-hidden="true">▷</span></button><button class="media_button" type="button" data-video-mute aria-label="Включить звук видео" aria-pressed="false"></button><span class="media_time" data-video-time>00:00 / 00:40</span></div>
-            <p class="media_message" data-media-message aria-live="polite" hidden></p>
           </div>
           <div class="case_copy">
-            <h3 class="case_heading"><button class="case_select" type="button" aria-controls="casesNoirScreen" aria-pressed="false" aria-describedby="caseTask6 caseResult6" data-cursor="-exclusion -md"><span class="case_index">06 ·</span><span class="noir_case_title">Rossi</span><span class="case_format">APP PROMO</span><span class="case_arrow" aria-hidden="true">↗</span></button></h3>
+            <h3 class="case_heading"><button class="case_select" type="button" aria-controls="casesNoirScreen" aria-pressed="false" aria-describedby="caseTask6 caseResult6"><span class="case_index">06 ·</span><span class="noir_case_title">Rossi</span><span class="case_format">APP PROMO</span><span class="case_arrow" aria-hidden="true">↗</span></button></h3>
             <p class="case_description" id="caseTask6">показал приложение так, как это делает apple: интерфейс в движении, 2D-графика</p>
             <p class="case_result" id="caseResult6"><strong>итог: просмотры и конверсия</strong></p>
           </div>
@@ -1150,11 +1077,9 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
         <article class="noir_case_row" data-index="6" data-format="2D MOTION · 16:9">
           <div class="case_mobile_media portfolio_media" id="caseMobile7">
             <video loop muted playsinline preload="auto" data-duration="14.442" poster="assets/case-7.jpg" src="assets/case-7-preview.mp4" data-full-src="assets/case-7.mp4" aria-label="Skills Better — 2D Motion"></video>
-            <div class="media_controls"><button class="media_button" type="button" data-video-toggle aria-label="Воспроизвести видео" aria-pressed="false"><span data-play-icon aria-hidden="true">▷</span></button><button class="media_button" type="button" data-video-mute aria-label="Включить звук видео" aria-pressed="false"></button><span class="media_time" data-video-time>00:00 / 00:14</span></div>
-            <p class="media_message" data-media-message aria-live="polite" hidden></p>
           </div>
           <div class="case_copy">
-            <h3 class="case_heading"><button class="case_select" type="button" aria-controls="casesNoirScreen" aria-pressed="false" aria-describedby="caseTask7 caseResult7" data-cursor="-exclusion -md"><span class="case_index">07 ·</span><span class="noir_case_title">Skills Better</span><span class="case_format">2D MOTION</span><span class="case_arrow" aria-hidden="true">↗</span></button></h3>
+            <h3 class="case_heading"><button class="case_select" type="button" aria-controls="casesNoirScreen" aria-pressed="false" aria-describedby="caseTask7 caseResult7"><span class="case_index">07 ·</span><span class="noir_case_title">Skills Better</span><span class="case_format">2D MOTION</span><span class="case_arrow" aria-hidden="true">↗</span></button></h3>
             <p class="case_description" id="caseTask7">вертикальные ролики с 2D-графикой и плотным моушеном</p>
             <p class="case_result" id="caseResult7"><strong>итог: высокое удержание</strong></p>
           </div>
@@ -1162,11 +1087,9 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
         <article class="noir_case_row" data-index="7" data-format="3D REELS · 9:16">
           <div class="case_mobile_media portfolio_media" id="caseMobile8">
             <video loop muted playsinline preload="auto" data-duration="16" poster="assets/case-8.jpg" src="assets/case-8-preview.mp4" data-full-src="assets/case-8.mp4" aria-label="Joseph Editing — вертикальный 3D Reels"></video>
-            <div class="media_controls"><button class="media_button" type="button" data-video-toggle aria-label="Воспроизвести видео" aria-pressed="false"><span data-play-icon aria-hidden="true">▷</span></button><button class="media_button" type="button" data-video-mute aria-label="Включить звук видео" aria-pressed="false"></button><span class="media_time" data-video-time>00:00 / 00:16</span></div>
-            <p class="media_message" data-media-message aria-live="polite" hidden></p>
           </div>
           <div class="case_copy">
-            <h3 class="case_heading"><button class="case_select" type="button" aria-controls="casesNoirScreen" aria-pressed="false" aria-describedby="caseTask8 caseResult8" data-cursor="-exclusion -md"><span class="case_index">08 ·</span><span class="noir_case_title">Joseph Editing</span><span class="case_format">3D REELS</span><span class="case_arrow" aria-hidden="true">↗</span></button></h3>
+            <h3 class="case_heading"><button class="case_select" type="button" aria-controls="casesNoirScreen" aria-pressed="false" aria-describedby="caseTask8 caseResult8"><span class="case_index">08 ·</span><span class="noir_case_title">Joseph Editing</span><span class="case_format">3D REELS</span><span class="case_arrow" aria-hidden="true">↗</span></button></h3>
             <p class="case_description" id="caseTask8">вертикальный ролик с 3D-моушеном в стиле Devin Jatho</p>
             <p class="case_result" id="caseResult8"><strong>итог: вирусные охваты</strong></p>
           </div>
@@ -1192,38 +1115,26 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
       <article class="concept_card reveal" data-dir="up">
         <div class="concept_media portfolio_media">
           <video loop muted playsinline preload="auto" data-duration="41.536" poster="assets/concept-1.jpg" src="assets/concept-1-preview.mp4" data-full-src="assets/concept-1.mp4" aria-label="Apple UX/UI — концепт промо"></video>
-          
-          <div class="media_controls"><button class="media_button" type="button" data-video-toggle aria-label="Воспроизвести концепт" aria-pressed="false"><span data-play-icon aria-hidden="true">▷</span></button><span class="media_time" data-video-time>00:00 / 00:41</span></div>
-          <p class="media_message" data-media-message aria-live="polite" hidden></p>
         </div>
         <div class="concept_copy"><h3>Apple <em>UX/UI</em></h3><p>интерфейс через монтаж и 2D-графику.</p></div>
       </article>
       <article class="concept_card reveal" data-dir="up">
         <div class="concept_media portfolio_media">
           <video loop muted playsinline preload="auto" data-duration="13.333" poster="assets/concept-2.jpg" src="assets/concept-2-preview.mp4" data-full-src="assets/concept-2.mp4" aria-label="Drake — концепт промо"></video>
-          
-          <div class="media_controls"><button class="media_button" type="button" data-video-toggle aria-label="Воспроизвести концепт" aria-pressed="false"><span data-play-icon aria-hidden="true">▷</span></button><span class="media_time" data-video-time>00:00 / 00:13</span></div>
-          <p class="media_message" data-media-message aria-live="polite" hidden></p>
         </div>
         <div class="concept_copy"><h3>Drake <em>promo</em></h3><p>коммерческое промо, сделанное без заказа.</p></div>
       </article>
       <article class="concept_card reveal" data-dir="up">
         <div class="concept_media portfolio_media">
           <video loop muted playsinline preload="auto" data-duration="23.210" poster="assets/concept-3.jpg" src="assets/concept-3-preview.mp4" data-full-src="assets/concept-3.mp4" aria-label="Destroy Lonely — MONSTER"></video>
-          
-          <div class="media_controls"><button class="media_button" type="button" data-video-toggle aria-label="Воспроизвести концепт" aria-pressed="false"><span data-play-icon aria-hidden="true">▷</span></button><span class="media_time" data-video-time>00:00 / 00:23</span></div>
-          <p class="media_message" data-media-message aria-live="polite" hidden></p>
         </div>
         <div class="concept_copy"><h3>Destroy Lonely <em>MONSTER</em></h3><p>музыкальный эдит. движение в ритме трека.</p></div>
       </article>
       <article class="concept_card reveal" data-dir="up">
         <div class="concept_media portfolio_media">
           <video loop muted playsinline preload="auto" data-duration="29.013" poster="assets/concept-4.jpg" src="assets/concept-4-preview.mp4" data-full-src="assets/concept-4.mp4" aria-label="Hypestgg — motion edit"></video>
-          
-          <div class="media_controls"><button class="media_button" type="button" data-video-toggle aria-label="Воспроизвести концепт" aria-pressed="false"><span data-play-icon aria-hidden="true">▷</span></button><span class="media_time" data-video-time>00:00 / 00:29</span></div>
-          <p class="media_message" data-media-message aria-live="polite" hidden></p>
         </div>
-        <div class="concept_copy"><h3>Hypestgg <em>edit</em></h3><p>короткий motion-эксперимент для X.</p><a class="editorial_link" href="https://x.com/hypestgg/status/2102435387486638473" target="_blank" rel="noopener noreferrer" data-cursor="-exclusion -md">оригинал в X <span aria-hidden="true">↗</span></a></div>
+        <div class="concept_copy"><h3>Hypestgg <em>edit</em></h3><p>короткий motion-эксперимент для X.</p><a class="editorial_link" href="https://x.com/hypestgg/status/2102435387486638473" target="_blank" rel="noopener noreferrer">оригинал в X <span aria-hidden="true">↗</span></a></div>
       </article>
     </div>
   </div>
@@ -1248,7 +1159,7 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
           монтаж для меня начинается с вопроса: зачем человек это смотрит и что он сделает после.
         </h2>
         <div style="margin-top:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
-          <a class="btn_noir_primary" style="white-space:nowrap" data-cursor="-exclusion -md" href="https://t.me/ArsenValtiel" target="_blank">
+          <a class="btn_noir_primary" style="white-space:nowrap" href="https://t.me/ArsenValtiel" target="_blank" rel="noopener noreferrer">
             <span>написать лично в telegram</span>
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
@@ -1344,9 +1255,9 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
           <defs><linearGradient id="retentionFill" x1="0" y1="30" x2="0" y2="230" gradientUnits="userSpaceOnUse"><stop stop-color="#eee8de" stop-opacity="0.14"/><stop offset="1" stop-color="#eee8de" stop-opacity="0"/></linearGradient></defs>
           <g class="chart_grid"><path d="M42 30H544M42 130H544M42 230H544"/><path d="M42 30V230M210 30V230M378 30V230M544 30V230"/></g>
           <g class="chart_axis"><text x="0" y="34">100%</text><text x="7" y="134">50%</text><text x="15" y="234">0%</text><text x="42" y="258">00:00</text><text x="202" y="258">01:00</text><text x="370" y="258">02:00</text><text x="523" y="258">03:00</text></g>
-          <path class="chart_area_fill" id="chartAreaFill" d="M42 30C66 44 82 62 112 63S164 59 210 65S258 77 300 73S355 78 400 76S490 74 544 74V230H42Z" fill="url(#retentionFill)"/>
+          <path class="chart_area_fill" id="chartAreaFill" d="M42 30 C66 44 82 62 112 63 C142 64 164 59 210 65 C256 71 258 77 300 73 C342 69 355 78 400 76 C445 74 490 74 544 74 V230 H42 Z" fill="url(#retentionFill)"/>
           <path class="retention_curve is-drop" id="curveDrop" pathLength="1" d="M42 30C58 62 66 91 82 112S115 145 145 155S177 172 210 179S248 178 275 191S323 193 350 204S413 207 446 216S510 219 544 222"/>
-          <path class="retention_curve is-arsen" id="curveArsen" d="M42 30C66 44 82 62 112 63S164 59 210 65S258 77 300 73S355 78 400 76S490 74 544 74" stroke="#f5f1eb" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path class="retention_curve is-arsen" id="curveArsen" d="M42 30 C66 44 82 62 112 63 C142 64 164 59 210 65 C256 71 258 77 300 73 C342 69 355 78 400 76 C445 74 490 74 544 74" stroke="#f5f1eb" stroke-width="2.5" stroke-linecap="round" fill="none"/>
           <path class="chart_target" d="M42 74H544"/>
           <g class="chart_endpoint_group" id="chartEndpointGroup">
             <circle class="chart_pulse" cx="544" cy="74" r="4"/>
@@ -1486,11 +1397,11 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
 
       <!-- SLEEK AGENCY BUTTONS (PHOTO 4 & SCREENSHOT 6 FIX) -->
       <div class="footer_clean_actions">
-        <a class="btn_agency_primary" data-cursor="-exclusion -md" href="https://t.me/ArsenValtiel" target="_blank">
+        <a class="btn_agency_primary" href="https://t.me/ArsenValtiel" target="_blank" rel="noopener noreferrer">
           <span>написать в telegram</span>
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 11.5L11.5 2.5M11.5 2.5H4.5M11.5 2.5V9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a class="btn_agency_secondary" data-cursor="-exclusion -md" href="https://t.me/declineda" target="_blank">
+        <a class="btn_agency_secondary" href="https://t.me/declineda" target="_blank" rel="noopener noreferrer">
           <span>канал с кейсами @declineda</span>
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 11.5L11.5 2.5M11.5 2.5H4.5M11.5 2.5V9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -1506,11 +1417,11 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
       <div class="strip_item">MOSCOW — WORLDWIDE</div>
       <div class="strip_item">РЕЖИССЕР МОНТАЖА</div>
       <div class="strip_item strip_links">
-        <a href="https://t.me/ArsenValtiel" target="_blank">TELEGRAM</a>
+        <a href="https://t.me/ArsenValtiel" target="_blank" rel="noopener noreferrer">TELEGRAM</a>
         <span class="strip_sep">·</span>
-        <a href="https://t.me/declineda" target="_blank">DECLINEDA</a>
+        <a href="https://t.me/declineda" target="_blank" rel="noopener noreferrer">DECLINEDA</a>
         <span class="strip_sep">·</span>
-        <a href="https://www.youtube.com/@ArsenValtiel" target="_blank">YOUTUBE</a>
+        <a href="https://www.youtube.com/@ArsenValtiel" target="_blank" rel="noopener noreferrer">YOUTUBE</a>
       </div>
     </div>
   </div>
@@ -1986,27 +1897,27 @@ $(document).ready(function() {
 .home_hero_alt_desc,
 .home_hero_alt_cta {
   opacity: 0;
-  transform: translate3d(0, 24px, 0);
-  filter: blur(16px);
-  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1), 
-              transform 1.1s cubic-bezier(0.16, 1, 0.3, 1), 
-              filter 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translate3d(0, 16px, 0);
+  filter: blur(4px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), 
+              filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform, opacity, filter;
 }
 .home_hero_title.is-bottom {
-  transform: translate3d(0, 16px, 0);
-  filter: blur(14px);
-  transition-delay: 0.1s;
+  transform: translate3d(0, 12px, 0);
+  filter: blur(3px);
+  transition-delay: 0.08s;
 }
 .home_hero_alt_desc {
-  transform: translate3d(0, 18px, 0);
-  filter: blur(12px);
-  transition-delay: 0.2s;
+  transform: translate3d(0, 12px, 0);
+  filter: blur(3px);
+  transition-delay: 0.16s;
 }
 .home_hero_alt_cta {
-  transform: translate3d(0, 16px, 0);
-  filter: blur(10px);
-  transition-delay: 0.32s;
+  transform: translate3d(0, 12px, 0);
+  filter: blur(2px);
+  transition-delay: 0.24s;
 }
 .nav_wrap {
   opacity: 0;
@@ -2033,7 +1944,7 @@ $(document).ready(function() {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 999px;
   padding: 8px 18px;
@@ -2043,15 +1954,12 @@ $(document).ready(function() {
   letter-spacing: 0.02em;
   color: #ffffff;
   text-decoration: none;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: background 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .btn_noir_nav:hover {
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.16);
   border-color: rgba(255, 255, 255, 0.45);
   color: #ffffff;
-  transform: translateY(-1px);
 }
 .btn_noir_nav svg {
   transition: transform 0.25s ease;
@@ -2076,21 +1984,17 @@ $(document).ready(function() {
   letter-spacing: -0.01em;
   color: #080808;
   text-decoration: none;
-  transition: all 0.25s ease;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 .btn_agency_primary:hover {
   background: #ffffff;
+  border-color: #ffffff;
   color: #000000;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
 }
-.btn_noir_primary:hover,
-.btn_agency_primary:hover {
-  background: rgba(255, 255, 255, 0.16);
-  border-color: rgba(255, 255, 255, 0.6);
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+.btn_noir_primary:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
 }
 .btn_noir_primary svg,
 .btn_agency_primary svg {
@@ -2117,20 +2021,17 @@ $(document).ready(function() {
   letter-spacing: -0.01em;
   color: #f5f1eb;
   text-decoration: none;
-  transition: all 0.25s ease;
+  transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
-.btn_agency_secondary:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.5);
-  color: #ffffff;
-  transform: translateY(-2px);
-}
-.btn_noir_secondary:hover,
 .btn_agency_secondary:hover {
   background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.38);
+  border-color: rgba(255, 255, 255, 0.5);
   color: #ffffff;
-  transform: translateY(-2px);
+}
+.btn_noir_secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
 }
 .btn_noir_secondary svg,
 .btn_agency_secondary svg {
@@ -2138,7 +2039,7 @@ $(document).ready(function() {
 }
 .btn_noir_secondary:hover svg,
 .btn_agency_secondary:hover svg {
-  transform: translateY(2px);
+  transform: translate(2px, -2px);
 }
 
 /* ───────── PORTFOLIO TYPOGRAPHY — protected hero / intro excluded ───────── */
@@ -2638,9 +2539,7 @@ $(document).ready(function() {
 .cinema_modal_backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(3, 3, 3, 0.94);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: rgba(3, 3, 3, 0.95);
 }
 .cinema_modal_container {
   position: relative;
@@ -2712,7 +2611,6 @@ $(document).ready(function() {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  cursor: pointer;
 }
 .cinema_video_stage.is-vertical {
   aspect-ratio: 9 / 16;
@@ -2725,99 +2623,6 @@ $(document).ready(function() {
   object-fit: contain;
   display: block;
   background: #000;
-}
-.cinema_play_center_btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
-  background: rgba(8, 8, 8, 0.75);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #fff;
-  font-size: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(8px);
-  pointer-events: none;
-  transition: transform 0.2s;
-}
-.cinema_play_center_btn .play_symbol {
-  margin-left: 3px;
-}
-.cinema_controls_bar {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 18px;
-  background: rgba(12, 12, 12, 0.95);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-.cinema_ctrl_btn {
-  background: transparent;
-  border: 0;
-  color: var(--av-paper);
-  font-size: 14px;
-  cursor: pointer;
-  padding: 4px 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.2s, transform 0.15s;
-}
-.cinema_ctrl_btn:hover {
-  opacity: 0.8;
-  transform: scale(1.08);
-}
-.cinema_time_display {
-  font-family: var(--av-mono);
-  font-size: 11px;
-  color: var(--av-muted);
-  white-space: nowrap;
-  font-variant-numeric: tabular-nums;
-}
-.cinema_scrubber_track {
-  position: relative;
-  flex: 1;
-  height: 6px;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 3px;
-  cursor: pointer;
-}
-.cinema_scrubber_buffered {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 0%;
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 3px;
-  pointer-events: none;
-}
-.cinema_scrubber_progress {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 0%;
-  background: var(--av-paper);
-  border-radius: 3px;
-  pointer-events: none;
-}
-.cinema_scrubber_handle {
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  transform: translate(-50%, -50%);
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
-  pointer-events: none;
 }
 
 /* Process 4-column grid */
@@ -3059,35 +2864,6 @@ $(document).ready(function() {
   color: rgba(255, 255, 255, 0.25);
 }
 
-/* ───────── CURSOR POLISH ───────── */
-.mf-cursor {
-  z-index: 9999999 !important;
-  pointer-events: none !important;
-}
-.mf-cursor:before {
-  background: #ffffff !important;
-}
-.mf-cursor.-exclusion {
-  mix-blend-mode: exclusion !important;
-}
-.mf-cursor.-exclusion:before {
-  background: #ffffff !important;
-}
-.mf-cursor.-md:before {
-  transform: scale(1.3) !important;
-}
-.mf-cursor.-lg:before {
-  transform: scale(2.2) !important;
-  background: #ffffff !important;
-}
-.mf-cursor-text {
-  color: #050505 !important;
-  font-family: Inter, system-ui, sans-serif !important;
-  font-size: 11px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.08em !important;
-  text-transform: uppercase !important;
-}
 </style>
 
 <script id="master-site-engine">
@@ -3166,18 +2942,6 @@ $(document).ready(function() {
     const modalTitle = document.getElementById('cinemaModalTitle');
     const modalTag = document.getElementById('cinemaModalTag');
     const modalStage = document.getElementById('cinemaVideoStage');
-    const modalPlayBtn = document.getElementById('cinemaPlayBtn');
-    const modalPlayIcon = document.getElementById('cinemaPlayIcon');
-    const modalCenterPlayBtn = document.getElementById('cinemaCenterPlayBtn');
-    const modalCurrentTime = document.getElementById('cinemaCurrentTime');
-    const modalTotalTime = document.getElementById('cinemaTotalTime');
-    const modalScrubberTrack = document.getElementById('cinemaScrubberTrack');
-    const modalProgressBar = document.getElementById('cinemaProgressBar');
-    const modalProgressHandle = document.getElementById('cinemaProgressHandle');
-    const modalBufferedBar = document.getElementById('cinemaBufferedBar');
-    const modalMuteBtn = document.getElementById('cinemaMuteBtn');
-    const modalMuteIcon = document.getElementById('cinemaMuteIcon');
-    const modalFullscreenBtn = document.getElementById('cinemaFullscreenBtn');
 
     function openCinemaModal(video) {
       if (!modal || !modalVideo || !video) return;
@@ -3207,31 +2971,25 @@ $(document).ready(function() {
         title = video.getAttribute('aria-label') || "Кейс";
       }
 
-      modalTitle.textContent = title;
-      modalTag.textContent = tag;
+      if (modalTitle) modalTitle.textContent = title;
+      if (modalTag) modalTag.textContent = tag;
 
-      if (isVertical) {
-        modalStage.classList.add('is-vertical');
-      } else {
-        modalStage.classList.remove('is-vertical');
+      if (modalStage) {
+        if (isVertical) modalStage.classList.add('is-vertical');
+        else modalStage.classList.remove('is-vertical');
       }
 
       modalVideo.src = fullSrc;
       modalVideo.poster = video.poster || '';
       modalVideo.muted = false;
       modalVideo.volume = 1;
+      modalVideo.controls = true;
 
       modal.classList.add('is-open');
       modal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
 
-      modalVideo.play().then(() => {
-        if (modalPlayIcon) modalPlayIcon.textContent = '❚❚';
-        if (modalCenterPlayBtn) modalCenterPlayBtn.hidden = true;
-      }).catch(() => {
-        if (modalPlayIcon) modalPlayIcon.textContent = '▷';
-        if (modalCenterPlayBtn) modalCenterPlayBtn.hidden = false;
-      });
+      modalVideo.play().catch(() => {});
     }
 
     function closeCinemaModal() {
@@ -3255,82 +3013,6 @@ $(document).ready(function() {
         if (!modal.classList.contains('is-open')) return;
         if (e.key === 'Escape') {
           closeCinemaModal();
-        } else if (e.key === ' ' || e.code === 'Space') {
-          e.preventDefault();
-          toggleModalPlay();
-        } else if (e.key === 'm' || e.key === 'M') {
-          toggleModalMute();
-        }
-      });
-    }
-
-    function toggleModalPlay() {
-      if (!modalVideo) return;
-      if (modalVideo.paused) {
-        modalVideo.play().catch(()=>{});
-        if (modalPlayIcon) modalPlayIcon.textContent = '❚❚';
-        if (modalCenterPlayBtn) modalCenterPlayBtn.hidden = true;
-      } else {
-        modalVideo.pause();
-        if (modalPlayIcon) modalPlayIcon.textContent = '▷';
-        if (modalCenterPlayBtn) modalCenterPlayBtn.hidden = false;
-      }
-    }
-
-    function toggleModalMute() {
-      if (!modalVideo) return;
-      modalVideo.muted = !modalVideo.muted;
-      if (modalMuteIcon) modalMuteIcon.textContent = modalVideo.muted ? '🔇' : '🔊';
-    }
-
-    if (modalPlayBtn) modalPlayBtn.addEventListener('click', toggleModalPlay);
-    if (modalStage) modalStage.addEventListener('click', (e) => {
-      if (e.target.closest('.cinema_controls_bar') || e.target.closest('.cinema_modal_close')) return;
-      toggleModalPlay();
-    });
-    if (modalMuteBtn) modalMuteBtn.addEventListener('click', toggleModalMute);
-    if (modalFullscreenBtn) {
-      modalFullscreenBtn.addEventListener('click', () => {
-        if (!modalVideo) return;
-        try {
-          if (modalVideo.requestFullscreen) modalVideo.requestFullscreen();
-          else if (modalVideo.webkitEnterFullscreen) modalVideo.webkitEnterFullscreen();
-        } catch(e){}
-      });
-    }
-
-    if (modalVideo) {
-      modalVideo.addEventListener('timeupdate', () => {
-        const cur = modalVideo.currentTime || 0;
-        const dur = modalVideo.duration || 1;
-        const pct = Math.min(100, Math.max(0, (cur / dur) * 100));
-
-        if (modalCurrentTime) modalCurrentTime.textContent = timecode(cur);
-        if (modalTotalTime && Number.isFinite(dur)) modalTotalTime.textContent = timecode(dur);
-        if (modalProgressBar) modalProgressBar.style.width = `${pct}%`;
-        if (modalProgressHandle) modalProgressHandle.style.left = `${pct}%`;
-
-        if (modalBufferedBar && modalVideo.buffered.length > 0) {
-          try {
-            const bufEnd = modalVideo.buffered.end(modalVideo.buffered.length - 1);
-            modalBufferedBar.style.width = `${Math.min(100, (bufEnd / dur) * 100)}%`;
-          } catch(e){}
-        }
-      });
-
-      modalVideo.addEventListener('ended', () => {
-        if (modalPlayIcon) modalPlayIcon.textContent = '▷';
-        if (modalCenterPlayBtn) modalCenterPlayBtn.hidden = false;
-      });
-    }
-
-    if (modalScrubberTrack && modalVideo) {
-      modalScrubberTrack.addEventListener('click', (e) => {
-        const rect = modalScrubberTrack.getBoundingClientRect();
-        const clickX = e.clientX - rect.left;
-        const ratio = Math.max(0, Math.min(1, clickX / rect.width));
-        if (Number.isFinite(modalVideo.duration)) {
-          modalVideo.currentTime = ratio * modalVideo.duration;
         }
       });
     }
@@ -3420,6 +3102,7 @@ $(document).ready(function() {
     function playVideo(frame, manual = false) {
       const video = currentVideo(frame);
       if (!video || document.hidden) return;
+      if (!desktop.matches && !manual) return;
       if (frame === screen && !desktop.matches) return;
       if (mobileFrames.includes(frame) && desktop.matches) return;
       if (!manual && userPaused.has(video)) return;
@@ -3435,8 +3118,6 @@ $(document).ready(function() {
         mobileFrames.forEach(other => { if (other && other !== frame) other.querySelector('video')?.pause(); });
         selectCase(mobileFrames.indexOf(frame));
       }
-      const message = frame.querySelector('[data-media-message]');
-      if (message) message.hidden = true;
       video.play().catch(error => {
         if (error.name === 'AbortError' || currentVideo(frame) !== video) return;
         updateMedia(frame);
@@ -3477,11 +3158,9 @@ $(document).ready(function() {
       if (_cClient && srcTitle) _cClient.textContent = srcTitle.textContent;
       if (_cFormat) _cFormat.textContent = rows[index].dataset.format || '';
       if (_cIndex) _cIndex.textContent = `[${String(index + 1).padStart(2, '0')} / ${String(rows.length).padStart(2, '0')}]`;
-      const message = screen.querySelector('[data-media-message]');
-      if (changed && message) message.hidden = true;
       updateMedia(screen);
       if (desktop.matches) playVideo(screen, manual);
-      else if (mobileFrames[index]) playVideo(mobileFrames[index], manual);
+      else if (manual && mobileFrames[index]) playVideo(mobileFrames[index], manual);
     }
 
     function refreshPlayback() {
@@ -3489,10 +3168,12 @@ $(document).ready(function() {
         videos.forEach(video => video.pause());
         return;
       }
-      const mobile = desktop.matches ? null : mobileFrames.find(frame => frame && (visible.get(frame) || 0) > 0.05);
-      if (mobile) selectCase(mobileFrames.indexOf(mobile));
+      if (!desktop.matches) {
+        videos.forEach(video => video.pause());
+        return;
+      }
       frames.forEach(frame => {
-        const allowedLayout = frame === screen ? desktop.matches : mobileFrames.includes(frame) ? frame === mobile : true;
+        const allowedLayout = frame === screen ? desktop.matches : false;
         const shouldPlay = allowedLayout && (visible.get(frame) || 0) > 0.05;
         const active = currentVideo(frame);
         frame.querySelectorAll('video').forEach(video => {
@@ -3506,41 +3187,8 @@ $(document).ready(function() {
       frame.querySelectorAll('video').forEach(video => {
         video.controls = false;
         video.muted = true;
-        ['play', 'pause', 'ended', 'timeupdate', 'durationchange', 'loadedmetadata', 'volumechange', 'playing'].forEach(event => {
-          video.addEventListener(event, () => updateMedia(frame));
-        });
-        video.addEventListener('error', () => {
-          if (currentVideo(frame) !== video) return;
-          const message = frame.querySelector('[data-media-message]');
-          if (message) {
-            message.textContent = 'Видео не загрузилось. Нажми Play, чтобы повторить.';
-            message.hidden = false;
-          }
-          updateMedia(frame);
-        });
-      });
-      frame.querySelector('[data-video-toggle]')?.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const video = currentVideo(frame);
-        if (!video) return;
-        if (video.paused) playVideo(frame, true);
-        else {
-          userPaused.add(video);
-          video.pause();
-        }
-      });
-      frame.querySelector('[data-video-mute]')?.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const video = currentVideo(frame);
-        if (!video) return;
-        if (video.muted) {
-          videos.forEach(other => { if (other !== video) other.muted = true; });
-          video.muted = false;
-        } else video.muted = true;
-        updateMedia(frame);
       });
       frame.classList.add('is-media-ready');
-      updateMedia(frame);
     });
 
     rows.forEach((row, index) => {
@@ -3579,7 +3227,7 @@ $(document).ready(function() {
       videos.forEach(video => video.pause());
     });
     window.addEventListener('pageshow', refreshPlayback);
-    selectCase(0, true); const firstVid = currentVideo(screen); if (firstVid) { firstVid.muted = true; firstVid.play().catch(()=>{}); }
+    selectCase(0, true); const firstVid = currentVideo(screen); if (firstVid && desktop.matches) { firstVid.muted = true; firstVid.play().catch(()=>{}); }
     sec.classList.add('is-enhanced');
   }
 
@@ -3597,11 +3245,13 @@ $(document).ready(function() {
 
     if (!chartFigure || !curveArsen || !curveDrop) return;
 
-    let lenArsen = 520;
-    let lenDrop = 530;
+    let lenArsen = 560;
+    let lenDrop = 560;
     try {
-      lenArsen = curveArsen.getTotalLength();
-      lenDrop = curveDrop.getTotalLength();
+      const la = curveArsen.getTotalLength();
+      if (la && !isNaN(la) && la > 100) lenArsen = Math.ceil(la);
+      const ld = curveDrop.getTotalLength();
+      if (ld && !isNaN(ld) && ld > 100) lenDrop = Math.ceil(ld);
     } catch (e) {}
 
     curveArsen.style.strokeDasharray = `${lenArsen} ${lenArsen}`;
@@ -3640,8 +3290,13 @@ $(document).ready(function() {
         if (progress < 1) {
           requestAnimationFrame(step);
         } else {
+          // Finish drawing graph all the way to 03:00 / 78% dot
+          curveArsen.style.strokeDasharray = 'none';
+          curveArsen.style.strokeDashoffset = '0';
           curveDrop.style.strokeDasharray = '4 5';
           curveDrop.style.strokeDashoffset = '0';
+          if (metricVal) metricVal.innerHTML = '78<span>%</span>';
+          if (endLabel) endLabel.textContent = '78%';
           if (areaFill) areaFill.classList.add('is-animated');
           if (endpointGroup) endpointGroup.classList.add('is-animated');
           if (calloutGroup) calloutGroup.classList.add('is-animated');
@@ -3678,9 +3333,12 @@ $(document).ready(function() {
       for (let i = 0; i <= steps; i++) {
         try {
           const pt = curveArsen.getPointAtLength((lenArsen * i) / steps);
-          samples.push(pt);
+          if (pt && !isNaN(pt.x) && !isNaN(pt.y)) {
+            samples.push(pt);
+          }
         } catch (err) {}
       }
+      samples.push({ x: 544, y: 74 });
 
       function findClosestPoint(targetX) {
         if (!samples.length) return { x: targetX, y: 74 };
@@ -3940,35 +3598,13 @@ $(document).ready(function() {
         <span class="cinema_modal_tag" id="cinemaModalTag">КЕЙС · ПОЛНАЯ ВЕРСИЯ СО ЗВУКОМ</span>
         <h3 class="cinema_modal_title" id="cinemaModalTitle">Што за тим</h3>
       </div>
-      <button class="cinema_modal_close" type="button" data-cinema-close aria-label="Закрыть плеер" data-cursor="-exclusion -md">
+      <button class="cinema_modal_close" type="button" data-cinema-close aria-label="Закрыть плеер">
         <span>ЗАКРЫТЬ [ESC]</span>
         <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
       </button>
     </div>
     <div class="cinema_video_stage" id="cinemaVideoStage">
-      <video id="cinemaModalVideo" playsinline preload="auto"></video>
-      <button class="cinema_play_center_btn" id="cinemaCenterPlayBtn" type="button" aria-label="Воспроизвести / Пауза" hidden>
-        <span class="play_symbol">▷</span>
-      </button>
-    </div>
-    <div class="cinema_controls_bar">
-      <button class="cinema_ctrl_btn" id="cinemaPlayBtn" type="button" aria-label="Воспроизвести / Пауза" data-cursor="-exclusion -md">
-        <span class="ctrl_icon" id="cinemaPlayIcon">❚❚</span>
-      </button>
-      <div class="cinema_time_display">
-        <span id="cinemaCurrentTime">00:00</span> / <span id="cinemaTotalTime">00:00</span>
-      </div>
-      <div class="cinema_scrubber_track" id="cinemaScrubberTrack" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
-        <div class="cinema_scrubber_buffered" id="cinemaBufferedBar"></div>
-        <div class="cinema_scrubber_progress" id="cinemaProgressBar"></div>
-        <div class="cinema_scrubber_handle" id="cinemaProgressHandle"></div>
-      </div>
-      <button class="cinema_ctrl_btn" id="cinemaMuteBtn" type="button" aria-label="Звук" data-cursor="-exclusion -md">
-        <span id="cinemaMuteIcon">🔊</span>
-      </button>
-      <button class="cinema_ctrl_btn" id="cinemaFullscreenBtn" type="button" aria-label="На весь экран" data-cursor="-exclusion -md">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 4.5V1H4.5M9.5 1H13V4.5M13 9.5V13H9.5M4.5 13H1V9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
+      <video id="cinemaModalVideo" controls playsinline preload="auto"></video>
     </div>
   </div>
 </div>
