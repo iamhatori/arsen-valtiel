@@ -76,11 +76,13 @@ test('кнопки управления имеют тип и доступные 
   }
 });
 
-test('обработчики выбора кейса и управления видео подключены', () => {
-  assert.match(html, /row\.addEventListener\(['"]click['"]/, 'нажатие на кейс не выбирает его');
-  assert.match(html, /frame\.querySelector\('\[data-video-toggle\]'\)\?\.addEventListener\(['"]click['"]/, 'кнопка воспроизведения не подключена');
-  assert.match(html, /frame\.querySelector\('\[data-video-mute\]'\)\?\.addEventListener\(['"]click['"]/, 'кнопка звука не подключена');
+test('кейсы открывают полное видео кликом, а модальное окно закрывается штатно', () => {
+  assert.match(html, /video\.addEventListener\(['"]click['"]/, 'клик по превью не открывает полное видео');
   assert.match(html, /modal\.querySelectorAll\('\[data-cinema-close\]'\)\.forEach/, 'закрытие по кнопке или фону не подключено');
+  assert.match(html, /if \(modal\.classList\.contains\('is-open'\) && event\.key === 'Escape'\)/, 'закрытие клавишей Escape не подключено');
+  assert.match(html, /<video id="cinemaModalVideo" controls playsinline/, 'в полной версии не включены нативные контролы');
+  assert.doesNotMatch(html, /class="media_controls"|data-video-toggle|data-video-mute/, 'кастомные контролы превью остались в разметке');
+  assert.match(html, /!desktop\.matches\) return/, 'превью может запускаться автоматически на мобильном');
 });
 
 test('модальное видео имеет обработчики закрытия', () => {
