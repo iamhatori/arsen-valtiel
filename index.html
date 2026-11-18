@@ -1134,7 +1134,13 @@ html:not(.wf-design-mode) .styleguide_guide_wrap {
         <div class="concept_media portfolio_media">
           <video loop muted playsinline preload="auto" data-duration="29.013" poster="assets/concept-4.jpg" src="assets/concept-4-preview.mp4" data-full-src="assets/concept-4.mp4" aria-label="Hypestgg — motion edit"></video>
         </div>
-        <div class="concept_copy"><h3>Hypestgg <em>edit</em></h3><p>проморолик для мемкоин-проекта.</p><a class="editorial_link" href="https://x.com/hypestgg/status/2102435387486638473" target="_blank" rel="noopener noreferrer">оригинал в X <span aria-hidden="true">↗</span></a></div>
+        <div class="concept_copy">
+          <h3>Hypestgg <em>edit</em></h3>
+          <div class="concept_meta">
+            <p>проморолик для мемкоин-проекта.</p>
+            <a class="editorial_link" href="https://x.com/hypestgg/status/2102435387486638473" target="_blank" rel="noopener noreferrer">оригинал в X <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
       </article>
     </div>
   </div>
@@ -2310,12 +2316,26 @@ $(document).ready(function() {
 
 /* ───────── CONCEPTS — moving images, editorial captions ───────── */
 .concepts_grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 38px 24px; }
-.concept_card { min-width: 0; }
-.concept_copy { padding: 18px 0 0; border-bottom: 1px solid var(--av-line); }
+.concept_card { min-width: 0; border-bottom: 1px solid var(--av-line); }
+.concept_copy { padding-top: 18px; }
 .concept_copy h3 { font-size: clamp(29px, 3vw, 42px); line-height: 1.1; letter-spacing: -0.02em; margin: 0; }
 .concept_copy h3 em { color: var(--av-muted); }
 .concept_copy p { font-size: 12px; line-height: 1.6; color: var(--av-muted); margin: 10px 0 6px; }
-.concept_copy .editorial_link { font-family: var(--av-mono); font-size: 9px; width: 100%; border: 0; padding-bottom: 16px; }
+.concept_meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  column-gap: 12px;
+}
+.concept_meta .editorial_link {
+  gap: 6px;
+  padding: 6px 0;
+  border: 0;
+  font-family: var(--av-mono);
+  font-size: 10px;
+  white-space: nowrap;
+}
 
 @media (max-width: 1199px) and (min-width: 992px) {
   .cases_noir_layout { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.15fr); gap: 32px; }
